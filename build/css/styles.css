@@ -810,10 +810,14 @@ footer .logo {
   clear: both;
 }
 
+.item-grid-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 .item-grid-block {
-  float: left;
-  margin: 0 8px 0 0;
-  width: calc(25% - 10px);
+  margin: 0 5px;
 }
 
 .item-grid-block .details {
@@ -915,8 +919,11 @@ footer .logo {
   left: 0;
   z-index: 7;
   color: #fff;
-  font-family: "BebasNeueRegular", sans-serif;
   transition: .3s ease;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 1.4;
 }
 
 .item-grid .add-bag-button {
@@ -925,9 +932,11 @@ footer .logo {
   left: 0;
   width: 100%;
   text-align: center;
-  font-size: 17px;
+  font-size: 15px;
   text-transform: uppercase;
   color: #5dc4ff;
+  font-family: "BebasNeueRegular", sans-serif;
+  letter-spacing: 2px;
 }
 
 .item-grid .add-bag-button span {
@@ -1315,6 +1324,10 @@ footer .logo {
   text-align: right;
 }
 
+.slider .bg .text h1 {
+  margin: 0;
+}
+
 .slider .bg .text span {
   font-size: 30px;
   color: white;
@@ -1510,6 +1523,7 @@ footer .logo {
 
 .members-form {
   width: 290px;
+  margin: 0 auto;
   background: rgba(93, 196, 255, 0.77);
   padding: 20px 20px 50px;
   color: #000000;
