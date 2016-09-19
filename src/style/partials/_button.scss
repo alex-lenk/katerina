@@ -1,22 +1,27 @@
 .button {
   border: 0;
   background: transparent;
-  color: #5dc4ff;
+  color: $blueColor;
   padding: 13px 15px;
   text-transform: uppercase;
   text-align: center;
   font-family: $CaviarDreams;
   font-weight: bold;
   letter-spacing: 3px;
+  transition: .3s ease;
   &-default {
     background-color: #000;
+    &:hover {
+      background-color: $blueColor;
+      color: #fff;
+    }
   }
   &-blue {
-    background-color: #5dc4ff;
+    background-color: $blueColor;
     color: #000;
     &:hover {
       background-color: #fff;
-      color: #5dc4ff;
+      color: $blueColor;
       outline: 1px solid;
     }
   }

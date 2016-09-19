@@ -13,6 +13,7 @@
 @import "partials/subscription-has-expired";
 @import "partials/music";
 @import "partials/item-grid";
+@import "partials/open-card";
 
 .blur {
   filter: blur(2px)
@@ -683,5 +684,43 @@
       padding: 13px 32px;
       cursor: pointer;
     }
+  }
+}
+
+.close, .card-close {
+  position: absolute;
+  z-index: 20;
+  top: 22px;
+  right: -20px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  &::after,
+  &::before {
+    position: absolute;
+    display: block;
+    top: 19px;
+    left: 10px;
+    content: '';
+    width: 30px;
+    height: 1px;
+    opacity: .9;
+    background-color: #fff;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(45deg)
+  }
+  &::before {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg)
+  }
+  &:hover::after,
+  &:hover::before {
+    background-color: #5dc4ff
   }
 }

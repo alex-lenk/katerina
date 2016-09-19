@@ -213,3 +213,32 @@ $(document).ready(function () {
         theme: 'minimal'
     });
 });
+
+// online-shop
+$('.item-grid-info').on('click', function () {
+    $('.overlay').css('display', 'block');
+    setTimeout(function () {
+        $('.overlay').css('background-color', 'rgba(0,0,0,0.6)');
+    }, 50);
+    $('.item-card').css('display', 'block');
+    $('.moving-panel').addClass('blur');
+    $('.music').addClass('blur');
+    $('.point').addClass('blur');
+    $('.main-footer').addClass('blur');
+    $('[name="card-photo"]').prop('checked', 'false');
+    $('[name="card-photo"]:first-of-type').prop('checked', 'true');
+});
+$('.overlay').on('click', function () {
+    $('.overlay').css('background-color', 'rgba(0,0,0,0)');
+    setTimeout(function () {
+        $('.overlay').css('display', 'none');
+    }, 300);
+    $('.item-card').css('display', 'none');
+    $('.moving-panel').removeClass('blur');
+    $('.music').removeClass('blur');
+    $('.point').removeClass('blur');
+    $('.main-footer').removeClass('blur');
+});
+$('.card-close').on('click', function () {
+    $('.overlay').trigger('click');
+});
