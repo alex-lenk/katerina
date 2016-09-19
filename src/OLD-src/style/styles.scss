@@ -1,0 +1,110 @@
+@import 'lib/breakpoint';
+@import 'lib/breakpoint-slicer';
+@import "partials/mixin";
+@import "partials/common";
+@import "partials/fonts";
+/* ПУНКТЫ МЕНЮ */
+@import "partials/main-nav";
+/* ВЫЕЗЖАЮЩАЯ ПАНЕЛЬ */
+@import "partials/moving-pannel";
+@import "partials/item-grid";
+
+.nav-list {
+  padding: 0;
+  list-style: none;
+  margin-bottom: 30px;
+  li {
+    line-height: 1.8;
+    padding-bottom: 2px;
+    margin-bottom: 14px;
+    letter-spacing: 2px;
+    cursor: pointer;
+  }
+  .active {
+    border-bottom: 1px solid $blue;
+    a {
+      color: $blue;
+    }
+  }
+  a {
+    transition: all .3s ease;
+    &:hover {
+      color: $blue;
+      text-decoration: none;
+    }
+  }
+}
+
+/* ФУТЕР */
+@import "partials/footer";
+
+.music {
+  position: fixed;
+  z-index: 30;
+  bottom: 30px;
+  right: 30px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.7) url(../img/play.png) 55% center no-repeat;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.blur {
+  filter: blur(2px);
+}
+
+.show-calendar {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 5;
+  .opened-panel + & {
+    right: -200px;
+  }
+}
+
+.calendar-block {
+  display: block;
+  background-color: #000;
+  width: 100px;
+  color: #fff;
+  span {
+    display: block;
+    padding: 7px 0;
+    line-height: 1.3;
+    text-align: center;
+  }
+}
+
+.collapse {
+  &-area {
+    float: left;
+    width: calc(100% - 250px);
+    margin-right: 100px;
+    overflow: auto;
+
+  }
+  &-nav {
+    background-color: rgba(0, 0, 0, .5);
+    &-item {
+      padding: 12px 15px;
+      background: transparent;
+      border: 0;
+      display: block;
+      color: #5dc4ff;
+    }
+  }
+  &-content {
+  }
+}
+
+
+@media only screen and (max-width: 1024px) {
+  .content .item-grid .item {
+    width: calc(33% - 8px);
+  }
+}

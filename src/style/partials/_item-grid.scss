@@ -1,0 +1,126 @@
+.item-grid {
+  overflow: auto;
+  &::after {
+    display: block;
+    content: '';
+    clear: both;
+  }
+
+  //.item-grid-block
+  &-block {
+    float: left;
+    margin: 0 8px 0 0;
+    width: calc(25% - 10px);
+    .details {
+      padding: 0 5px;
+      span {
+        font-size: 15px;
+        margin-right: 8px;
+        letter-spacing: 1px;
+        padding: 15px 0;
+        display: inline-block;
+      }
+    }
+    .price {
+      color: #fff;
+    }
+    .old-price {
+      color: #fff;
+      text-decoration: line-through;
+    }
+    .discount,
+    .title {
+      color: $red;
+    }
+  }
+
+  //.item-grid-info
+  &-info {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    transition: .3s ease;
+    border-bottom: 1px solid transparent;
+    &:before {
+      width: 0;
+      height: 100%;
+      position: absolute;
+      content: '';
+      background-color: rgba(0, 0, 0, .7);
+      z-index: 4;
+      transition: .3s ease;
+    }
+    img {
+      transition: .3s ease;
+    }
+    &:hover {
+      border-color: $blueColor;
+      &:before {
+        width: 100%;
+      }
+      img {
+        filter: blur(2px);
+      }
+      .add-bag {
+        width: 100%;
+        opacity: 1;
+      }
+    }
+  }
+
+  //.item-grid-status
+  &-status {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    text-align: right;
+    z-index: 5;
+    font-weight: bold;
+    font-size: 30px;
+    text-transform: uppercase;
+    span {
+      margin-left: 15px;
+      display: inline-block;
+    }
+    .sale {
+      color: $red;
+    }
+    .new {
+      color: #fff;
+    }
+  }
+
+  //.add-bag
+  .add-bag {
+    padding: 15px;
+    width: 0;
+    opacity: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 7;
+    color: #fff;
+    font-family: $BebasNeueRegular;
+    transition: .3s ease;
+    &-button {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      font-size: 17px;
+      text-transform: uppercase;
+      color: $blueColor;
+      span {
+        border-bottom: 1px solid;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .content .item-grid .item {
+    width: calc(33% - 8px)
+  }
+}

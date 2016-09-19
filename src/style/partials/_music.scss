@@ -1,0 +1,167 @@
+.music {
+  &-button {
+    position: fixed;
+    z-index: 30;
+    bottom: 30px;
+    right: 30px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, .7) url(../img/play.png) 55% center no-repeat;
+    cursor: pointer;
+    &:hover {
+      opacity: .8
+    }
+  }
+  &-player {
+    position: absolute;
+    width: 320px;
+    height: 100%;
+    padding: 0;
+    top: 0;
+    right: -320px;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, .9);
+    transition: .9s ease;
+    &-open {
+      right: 0;
+    }
+    &-hide {
+      width: 11px;
+      height: 22px;
+      position: absolute;
+      top: 12px;
+      left: 15px;
+      background: url("../img/svg/right.svg") no-repeat;
+      cursor: pointer;
+      z-index: 99;
+    }
+    &-wrap {
+      padding: 50px 20px 20px;
+    }
+    &-album {
+      margin-top: 5px;
+      text-align: center;
+      img {
+        transition: .3s ease;
+      }
+      .buy {
+        display: none;
+        font-size: 9px;
+        font-family: $CaviarDreams-Bold;
+        color: #fff;
+        border-bottom: 1px solid;
+      }
+      a {
+        position: relative;
+        display: inline-block;
+        &:before {
+          transition: .3s ease;
+          content: '';
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+        &:hover {
+          &:before {
+            background-color: rgba(0, 0, 0, .5);
+          }
+          .buy {
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 32%;
+          }
+          img {
+            outline: 1px solid #5dc4ff;
+          }
+        }
+      }
+    }
+    &-ticker {
+      margin: 25px 0;
+      color: #5dc4ff;
+      font-size: 13px;
+      font-weight: 700;
+      font-family: $CaviarDreams-BoldItalic;
+    }
+    &-control {
+      margin: 0 0 25px;
+      padding: 20px 0;
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid transparent;
+      border-top-color: #5dc4ff;
+      border-bottom-color: #5dc4ff;
+      li {
+        width: 20px;
+        height: 14px;
+        transition: .3s ease;
+        background-repeat: no-repeat;
+        cursor: pointer;
+      }
+      .state {
+        width: 16px;
+        height: 20px;
+        margin: 0 40px;
+      }
+      .left {
+        background-image: url("../img/svg/BG_pleer_back.svg");
+        &:hover {
+          background-image: url("../img/svg/BG_pleer_back_select.svg");
+        }
+      }
+      .play {
+        background-image: url("../img/svg/BG_pleer_play.svg");
+        &:hover {
+          background-image: url("../img/svg/BG_pleer_play_select.svg");
+        }
+      }
+      .pause {
+        background-image: url("../img/svg/BG_pleer_bottom_pause BG.svg");
+        &:hover {
+          opacity: .8;
+        }
+      }
+      .right {
+        background-image: url("../img/svg/BG_pleer_next.svg");
+        &:hover {
+          background-image: url("../img/svg/BG_pleer_next_select.svg");
+        }
+      }
+    }
+    &-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      li {
+        padding: 15px;
+        color: #d7d7d7;
+        font-family: $CaviarDreams-Bold;
+        cursor: pointer;
+        font-size: 13px;
+        transition: .3s linear;
+        .play {
+          width: 8px;
+          height: 9px;
+          opacity: 0;
+          transition: .3s linear;
+          background: url("../img/svg/BG_pleer_play_select.svg") no-repeat;
+        }
+        &:hover {
+          background-color: #000;
+          color: #5dc4ff;
+          .play {
+            margin-right: 10px;
+            opacity: 1;
+            display: inline-block;
+          }
+        }
+      }
+    }
+  }
+}

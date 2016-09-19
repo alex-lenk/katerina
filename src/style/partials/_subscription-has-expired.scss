@@ -1,0 +1,57 @@
+.subscription-has-expired {
+  width: 310px;
+  padding: 30px;
+  margin: 40px;
+  text-transform: uppercase;
+  background-color: rgba(93, 196, 255, .8);
+  color: #000;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, .15);
+  font-family: $BebasNeueRegular;
+  .head {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  .title {
+    font-size: 160px;
+  }
+  .text {
+    margin: 10px 0 15px;
+    font-size: 30px;
+    &-2 {
+      font-size: 13px;
+      font-family: $CaviarDreams;
+      font-weight: bold;
+    }
+    &-3 {
+      margin-top: 5px;
+      font-size: 75%;
+      display: block;
+    }
+  }
+  .label-block {
+    margin-bottom: 15px;
+    display: block;
+    font-size: 15px;
+    @include cf;
+    .radio-custom-view {
+      display: block;
+    }
+    .text-right {
+      letter-spacing: 3px;
+      float: right;
+      line-height: .9;
+    }
+    .cash {
+      width: 75px;
+      display: inline-block;
+      font-size: 18px;
+      font-weight: 700;
+      text-align: right;
+    }
+  }
+  .button {
+    width: 100%;
+    margin-top: 30px;
+    font-size: 11px;
+  }
+}

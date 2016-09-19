@@ -1,0 +1,182 @@
+@font-face{
+	font-family: 'BEBASNEUE-REGULAR';
+	src: url('../fonts/BEBASNEUE-REGULAR.ttf');
+}
+
+@font-face{
+	font-family: 'CAVIAR-DREAMS-BOLD';
+	src: url('../fonts/CAVIAR+DREAMS+BOLD_1.ttf');
+}
+
+@font-face{
+	font-family: 'CAVIARDREAMS_ITALIC_1';
+	src: url('../fonts/CAVIARDREAMS_ITALIC_1.ttf');
+}
+
+
+.form{
+	width: 234px;
+	background: rgba(93,196,255, 0.77);
+	padding: 28px 28px 50px 28px;
+	color: #000000;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.form > p{
+	font-family: 'BEBASNEUE-REGULAR';
+	font-size: 160px;
+	line-height: 53px;
+	margin: 28px 0 0 -5px;
+}
+
+.form.three > p{
+	font-size: 85px;
+}
+
+.form > p > span{
+	font-size: 62px;
+	line-height: 53px;
+	margin-bottom: 20px;
+	margin-left: 5px;
+}
+
+.form span.form-text{
+	font-size: 19px;
+	font-family: 'BEBASNEUE-REGULAR';
+	line-height: 23px;
+	margin: 20px 0;
+	display: block;
+}
+
+.form.three span.form-text{
+	font-size: 15px;
+	line-height: 19px;
+	text-align: left;
+	margin: 30px 0;
+}
+
+.form span.sign-in{
+	font-size: 20px;
+	color: #f3f2f2;
+	font-family: 'CAVIAR-DREAMS-BOLD';
+	letter-spacing: 5px;
+}
+
+.form .socials{
+	margin: 20px 0;
+}
+
+.form .socials a{
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background: #5dc4ff;
+	padding: 12px 9px;
+	margin-right: 17px;
+}
+
+.form .socials a:last-child{
+	margin-right: 0;
+}
+
+.form .socials a:hover{
+	background: #fff;
+	transition: 0.3s;
+}
+
+.icon{
+	background: url(../img/sprite.png);
+	display: inline-block;
+	vertical-align: middle;
+  text-align: center
+}
+
+.icon.tw{
+	background-position: 0 0;
+	width: 22px;
+	height: 20px;
+	margin-left: 1px;
+}
+
+.icon.fb{
+	background-position: -24px 0;
+	width: 10px;
+	height: 20px;
+	margin: 2px 6px 6px 7px
+}
+
+.icon.gp{
+	background-position: -36px 0;
+	width: 26px;
+	height: 20px;
+	margin: 2px -3px 2px 0px;
+}
+
+.icon.mail{
+	background-position: -65px 0;
+	width: 22px;
+	height: 20px;
+	margin: 3px 0px 0 1px;
+}
+
+.icon.profile{
+	width: 57px;
+	background-position: -93px 0;
+	height: 57px;
+	display: block;
+  float: left;
+  margin: 10px 15px 10px 0;
+}
+
+.form input{
+	width: 198px;
+	border: 1px solid #848484;
+	padding: 10px 17px;
+	color: #b2b1b1;
+	font-size: 14px;
+	font-family: 'CAVIARDREAMS_ITALIC_1';
+	margin-bottom: 10px;
+}
+
+.form a.remember{
+	font-size: 10px;
+	font-family: 'CAVIAR-DREAMS-BOLD';
+	text-decoration: underline;
+	color: #000000;
+	display: block;
+	margin: 10px 0 20px 0;
+}
+
+.form form button{
+	font-size: 11px;
+	font-family: 'CAVIAR-DREAMS-BOLD';
+	color: #fff;
+	background: #000000;
+	border: none;
+	padding: 13px 43px;
+	cursor: pointer;
+}
+
+.form hr{
+	border-color: #000;
+	margin: 20px 0;
+}
+
+.form span.b-text{
+	font-size: 16px;
+	font-family: 'BEBASNEUE-REGULAR';
+	display: block;
+	margin-bottom: 25px;
+}
+
+.form a.signing{
+	color: #5dc4ff;
+	font-family: 'CAVIAR-DREAMS-BOLD';
+	text-decoration: none;
+	font-size: 11px;
+	background: #000000;
+	border: none;
+	padding: 13px 32px;
+	cursor: pointer;
+}

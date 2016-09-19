@@ -1,0 +1,23 @@
+.button {
+  border: 0;
+  background: transparent;
+  color: #5dc4ff;
+  padding: 13px 15px;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: $CaviarDreams;
+  font-weight: bold;
+  letter-spacing: 3px;
+  &-default {
+    background-color: #000;
+  }
+  &-blue {
+    background-color: #5dc4ff;
+    color: #000;
+    &:hover {
+      background-color: #fff;
+      color: #5dc4ff;
+      outline: 1px solid;
+    }
+  }
+}
