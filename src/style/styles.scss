@@ -14,9 +14,10 @@
 @import "partials/music";
 @import "partials/item-grid";
 @import "partials/open-card";
+@import "partials/what-new";
 
 .blur {
-  filter: blur(2px)
+  filter: blur(2px);
 }
 
 .tabs {
@@ -89,7 +90,7 @@
     float: left;
     width: 130px;
     margin: 0 20px 0 60px;
-    font-family: 'CaviarDreams';
+    font-family: 'CaviarDreams', sans-serif;
     font-size: 10px;
     font-weight: bold;
     color: white;
