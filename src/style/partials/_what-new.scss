@@ -1,5 +1,4 @@
 .list-posts {
-  margin: 0 410px 0 0;
   padding: 0;
   list-style: none;
   @include cf;
@@ -25,8 +24,9 @@
       }
       .date,
       .answer {
-        font-size: 10px;
+        font-size: 11px;
         color: #353535;
+        font-family: Arial, sans-serif;
       }
     }
     &-content {
@@ -51,7 +51,7 @@
         font-weight: normal;
       }
       .text {
-        margin: 10px 0;
+        margin: 5px 15px 10px 0;
         color: #fff;
         font-family: $RobotoCondensed;
         font-style: italic;
@@ -61,6 +61,7 @@
       .count-video {
         font-size: 11px;
         color: #565656;
+        font-family: Arial, sans-serif;
       }
     }
     &:hover {
@@ -79,6 +80,17 @@
         outline-width: 15px;
         outline-offset: -15px;
       }
+    }
+  }
+}
+
+.content-blog {
+  margin: 0 400px 0 0;
+  .whats-new-title {
+    text-align: right;
+    span {
+      display: inline-block;
+      width: 130px;
     }
   }
 }
