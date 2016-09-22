@@ -2,12 +2,8 @@
 
 var gulp = require('gulp'),
     imagemin = require('gulp-imagemin'),
-    plumber = require('gulp-plumber'),
     autoprefixer = require('gulp-autoprefixer'),
     uglify = require('gulp-uglify'),
-    pump = require('pump'),
-    zip = require('gulp-zip'),
-    ncp = require('ncp').ncp,
     sass = require('gulp-sass'),
     sourcemaps = require('gulp-sourcemaps'),
     rigger = require('gulp-rigger'),
@@ -16,11 +12,13 @@ var gulp = require('gulp'),
     watch = require('gulp-watch'),
     newer = require('gulp-newer'),
     rename = require('gulp-rename'),
-    rimraf = require('rimraf'),
+    svgSprite = require('gulp-svg-sprites'),
+    svgmin = require('gulp-svgmin'),
+    cheerio = require('gulp-cheerio'),
+    replace = require('gulp-replace'),
     create = browserSync.create(),
     reload = browserSync.reload;
 
-ncp.limit = 16;
 
 var path = {
         build: { //Тут мы укажем куда складывать готовые после сборки файлы
@@ -56,32 +54,8 @@ var path = {
         port: 9005,
         logPrefix: "frontend",
         devBaseUrl: 'http://localhost'
-    },
-    path_to_landings = '/path/to/landings/',
-    domain_name = 'domain.name';
+    };
 
-gulp.task('export:all', function () {
-    ncp('./build/', path_to_landings + domain_name, function (err) {
-        if (err) {
-            return console.error(err);
-        }
-        console.log('done!');
-    });
-});
-gulp.task('export:css', function () {
-    ncp('./build/css/', path_to_landings + domain_name + '/css/', function (err) {
-        if (err) {
-            return console.error(err);
-        }
-        console.log('done!');
-    });
-});
-
-gulp.task('zip', function () {
-    gulp.src(['./build/*', '!./build/archive.zip'])
-        .pipe(zip('archive.zip'))
-        .pipe(gulp.dest('./build'));
-});
 gulp.task('webserver', function () {
     browserSync(config);
 });

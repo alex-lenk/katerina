@@ -121,11 +121,16 @@
       margin-bottom: 14px;
       letter-spacing: 2px;
       cursor: pointer;
+      font-size: 10px;
+      font-weight: normal;
+      font-family: $CaviarDreams-Bold;
+      border: 1px solid transparent;
+      transition: .3s ease;
+      &:hover, &.active {
+        color: $blueColor;
+        border-bottom-color: $blueColor;
+      }
     }
-  }
-  .tab.active {
-    color: $blueColor;
-    border-bottom: 1px solid;
   }
   .tab-block {
     display: none;
@@ -134,11 +139,12 @@
     margin-right: 100px;
     &-title {
       width: 60%;
-      margin: -20px 0 20px 50px;
-      font-family: 'Calibri';
+      margin: -20px 0 20px 65px;
       font-size: 14px;
       font-style: italic;
       color: white;
+      font-family: $RobotoCondensed;
+      font-weight: 300;
     }
     .drop-nav {
       float: left;
@@ -157,8 +163,11 @@
         height: 35px;
         margin-bottom: 1px;
         background-color: rgba(0, 0, 0, 0.5);
-        font-weight: bold;
+        font-weight: normal;
+        font-size: 12px;
         cursor: pointer;
+        font-family: $BebasNeueBold;
+        letter-spacing: 1px;
       }
       .active {
         background-color: $blueColor;
@@ -171,7 +180,6 @@
 
   }
   .table-container {
-    font-family: Calibri;
     height: auto;
     .preview {
       position: absolute;
@@ -234,6 +242,9 @@
       text-transform: uppercase;
       line-height: 35px;
       border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      font-family: $CaviarDreams-Bold;
+      font-size: 13px;
+      letter-spacing: 1px;
     }
     td {
       width: 50%;
@@ -241,6 +252,9 @@
       background-color: rgba(0, 0, 0, 0.5);
       line-height: 25px;
       border-right: 1px solid rgba(255, 255, 255, 0.05);
+      font-family: $RobotoCondensed;
+      font-weight: 300;
+      font-size: 14px;
       &:last-child {
         border-right: none;
       }

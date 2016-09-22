@@ -82,6 +82,9 @@
       white-space: nowrap;
       display: inline;
       font-size: 40px;
+      font-family: $BebasNeueBold;
+      font-weight: normal;
+      letter-spacing: 1px;
     }
     .info {
       margin: 0;
@@ -91,30 +94,37 @@
       top: 21px;
       list-style: none;
       li {
-        margin-right: 10px;
-        display: inline-block;
         width: 30px;
         height: 30px;
-        border: 1px solid #5dc4ff;
-        border-radius: 50%;
+        margin-right: 10px;
+        display: inline-block;
         position: relative;
         cursor: pointer;
-      }
-      .profile {
-        background: url(../img/svg/profile.svg) center no-repeat #000;
-        background-size: 60% 60%;
-      }
-      .basket {
-        background: url(../img/svg/basket.svg) center no-repeat #000;
-        background-size: 60% 60%;
-        &[data-count]:not([data-count='']):before {
-        color: #fff;
-          content: attr(data-count);
-          font-size: 10px;
-          position: absolute;
-          bottom: -11px;
-          right: -5px;
+        background-color: #000;
+        border: 1px solid #5dc4ff;
+        border-radius: 50%;
+        line-height: 1;
+        transition: .3s ease;
+        svg {
+          width: 15px;
+          margin: 0 0 8px 7px;
+          fill: #5dc4ff;
+          transition: .3s ease;
         }
+        &:hover {
+          background-color: $blueColor;
+          svg {
+            fill: #000;
+          }
+        }
+      }
+      .basket[data-count]:not([data-count='']):before {
+        color: #fff;
+        content: attr(data-count);
+        font-size: 10px;
+        position: absolute;
+        bottom: -11px;
+        right: -5px;
       }
     }
   }
