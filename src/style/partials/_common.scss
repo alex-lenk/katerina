@@ -1,8 +1,7 @@
 $opacity-blue: rgba(93, 196, 255, 0.3);
-$opacity-black: rgba(0,0,0,0.5);
+$opacity-black: rgba(0, 0, 0, 0.5);
 $blueColor: #5dc4ff;
 $red: #ff0000;
-$opacity-blue: rgba(93, 196, 255, 0.3);
 
 $BebasNeueRegular: "BebasNeueRegular", sans-serif;
 $BebasNeueBold: "BebasNeueBold", sans-serif;
@@ -88,4 +87,111 @@ img {
 :focus:-ms-input-placeholder {
   opacity: 0;
   transition: opacity 0.3s ease;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-twitter:before {
+  content: "\ea96";
+}
+
+.icon-facebook:before {
+  content: "\ea90";
+}
+
+.icon-google-plus:before {
+  content: "\ea8b";
+}
+
+.icon-mail4:before {
+  content: "\ea86";
+}
+
+.icon-mail3:before {
+  content: "\ea85";
+}
+
+.icon-mail2:before {
+  content: "\ea84";
+}
+
+.icon-mail:before {
+  content: "\ea83";
+}
+
+.icon-share2:before {
+  content: "\ea82";
+}
+
+.icon-eject:before {
+  content: "\ea25";
+}
+
+.icon-next2:before {
+  content: "\ea24";
+}
+
+.icon-previous2:before {
+  content: "\ea23";
+}
+
+.icon-last:before {
+  content: "\ea22";
+}
+
+.icon-first:before {
+  content: "\ea21";
+}
+
+.icon-forward3:before {
+  content: "\ea20";
+}
+
+.icon-backward2:before {
+  content: "\ea1f";
+}
+
+.icon-stop2:before {
+  content: "\ea1e";
+}
+
+.icon-pause2:before {
+  content: "\ea1d";
+}
+
+.icon-play3:before {
+  content: "\ea1c";
+}
+
+.icon-play2:before {
+  content: "\ea15";
+}
+
+.icon-eye:before {
+  content: "\e9ce";
+}
+
+.icon-unlocked:before {
+  content: "\e990";
+}
+
+.icon-lock:before {
+  content: "\e98f";
+}
+
+.icon-user:before {
+  content: "\e971";
 }
