@@ -3,6 +3,22 @@
     padding: 0;
     list-style: none;
     @include cf;
+    &.blog-lists .blog-item:hover {
+      cursor: pointer;
+      .blog-item-info {
+        background-color: #5dc4ff;
+        color: #000;
+      }
+      .blog-item-content {
+        background-color: rgba(0, 0, 0, 1);
+      }
+      .blog-item-content .title {
+        color: #5dc4ff;
+      }
+      .avatar {
+        border-width: 15px;
+      }
+    }
   }
   &-item {
     margin-bottom: 1px;
@@ -59,31 +75,101 @@
         font-weight: 300;
         font-size: 13px;
       }
-      .count-video {
-        font-size: 11px;
-        color: #565656;
-        font-family: Arial, sans-serif;
-      }
-    }
-    &:hover {
-      cursor: pointer;
-      .blog-item-info {
-        background-color: #5dc4ff;
-        color: #000;
-      }
-      .blog-item-content {
-        background-color: rgba(0, 0, 0, 1);
-      }
-      .blog-item-content .title {
-        color: #5dc4ff;
-      }
-      .avatar {
-        border-width: 15px;
-      }
     }
   }
   &-post-single {
+    .blog-item-content {
+      .title {
+        font-size: 24px;
+        color: #5dc4ff;
+      }
+      .text {
+        font-size: 13px;
+      }
+    }
+  }
+}
 
+.count-video {
+  font-size: 11px;
+  color: #565656;
+  font-family: Arial, sans-serif;
+}
+
+.play-social-nav {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  height: 100%;
+  clear: both;
+  clear: left;
+  overflow: hidden;
+  .button {
+    width: 130px;
+    float: left;
+    font-size: 15px;
+    font-family: $BebasNeueBold;
+  }
+  .count-video {
+    float: left;
+    padding-left: 20px;
+    line-height: 47px;
+    text-transform: uppercase;
+    color: #555;
+  }
+  .social {
+    height: 47px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    &:after {
+      display: none;
+    }
+    li {
+      text-align: center;
+      cursor: pointer;
+      height: 100%;
+      line-height: 47px;
+      transition: .3s ease;
+      &:not(:last-of-type) {
+        width: 0;
+        opacity: 0;
+      }
+    }
+    a {
+      width: 50px;
+      font-size: 16px;
+      display: block;
+      height: 100%;
+      transition: .3s ease;
+      color: $blueColor;
+      &.messenger {
+        background: url(../img/messenger.png) no-repeat center;
+        &:hover {
+          background: url(../img/messenger-hover.png) no-repeat center #5dc4ff;
+        }
+      }
+      &.fork {
+        font-family: 'IcoMoon';
+        z-index: 5;
+        position: relative;
+      }
+      &:hover {
+        color: #000;
+        background-color: $blueColor;
+      }
+    }
+    &.share-open {
+      li {
+        &:not(:last-of-type) {
+          width: 50px;
+          opacity: 1;
+        }
+        &:last-of-type {
+          background-color: $blueColor;
+          color: #000;
+        }
+      }
+    }
   }
 }
 
@@ -95,264 +181,5 @@
       display: inline-block;
       width: 130px;
     }
-  }
-}
-
-.video-post {
-  width: 65%;
-  min-width: 530px;
-  height: 100%;
-  background-color: $opacity-black;
-
-  .comment-block {
-    padding: 0;
-    border-top: 0;
-    .avatar {
-      top: 25px;
-      margin: 0;
-      margin-left: 25px;
-    }
-    .comment-message {
-      font-family: 'Roboto', sans-serif;
-      font-weight: 200;
-      font-style: normal;
-      color: #d6d6d6;
-      margin-left: 100px;
-      padding-right: 60px;
-      width: calc(100% - 100px);
-
-      span {
-        display: block;
-        color: darken($blueColor, 5%);
-        font-size: 16px;
-        font-style: italic;
-      }
-    }
-    .comment {
-      position: relative;
-      display: block;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-      &::after {
-        position: absolute;
-        width: 20px;
-        height: 20px;
-        top: 0;
-        right: 20px;
-        bottom: 0;
-        margin: auto;
-        color: #000;
-        font-family: 'IcoMoon';
-        content: '\e967';
-      }
-      &:hover {
-        background-color: #000;
-        .comment-message {
-          color: #fff;
-        }
-        &:after {
-          color: $blueColor;
-        }
-      }
-    }
-  }
-
-  .social {
-    float: right;
-    li {
-      padding-top: 0;
-      margin-bottom: 0;
-      margin-right: 0;
-      text-align: center;
-      height: 40px;
-      width: 45px;
-      cursor: pointer;
-      a {
-        margin: auto;
-        margin-top: 6px;
-        line-height: 40px;
-        font-size: 16px;
-        &.gplus {
-          font-size: 20px;
-        }
-      }
-      .messenger {
-        background-position: 3px 4px;
-      }
-      &:hover {
-        color: #000;
-        background-color: $blueColor;
-        .messenger {
-          background: url(../img/messenger-hover.png) no-repeat;
-          background-position: 3px 4px;
-        }
-      }
-    }
-  }
-}
-
-.name-post {
-  min-height: 100px;
-  // margin-bottom: 1px;
-  color: #fff;
-  &::after {
-    display: block;
-    content: '';
-    clear: both;
-  }
-  .avatar {
-    float: left;
-    height: 110px;
-    width: 110px;
-    background-color: red;
-    margin-right: 5px;
-  }
-  .post {
-    float: left;
-    width: calc(100% - 115px);
-    padding: 12px 10px 10px;
-    h1 {
-      font-size: 24px;
-      margin-bottom: 10px;
-    }
-    p {
-      font-size: 12px;
-      line-height: 1.5;
-      font-family: 'Roboto', sans-serif;
-    }
-  }
-}
-
-.play-social-nav {
-  display: none;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  &.active {
-    display: block;
-  }
-  &::after {
-    display: block;
-    content: '';
-    clear: both;
-  }
-  .play {
-    float: left;
-    font-family: 'BebasNeue';
-    width: 110px;
-    height: 40px;
-    margin-top: 0;
-    margin-bottom: 0;
-    font-size: 16px;
-    font-weight: bold;
-  }
-  span {
-    float: left;
-    padding-top: 12px;
-    padding-left: 20px;
-    text-transform: uppercase;
-    color: #555;
-  }
-  .fork {
-    font-family: 'IcoMoon';
-    float: right;
-    width: 45px;
-    height: 40px;
-    text-align: center;
-    background-color: $blueColor;
-    color: #000;
-    line-height: 40px;
-  }
-}
-
-.subscribing {
-  min-height: 110px;
-  &::after {
-    display: block;
-    content: '';
-    clear: both;
-  }
-  .sign-up {
-    float: left;
-    width: 45%;
-    padding: 20px 0 20px 0;
-    font-size: 12px;
-    color: #fff;
-    letter-spacing: 1px;
-    h2 {
-      margin-left: 25px;
-      margin-bottom: 10px;
-    }
-    i {
-      color: $blueColor;
-    }
-    .social {
-      width: 100%;
-      padding-top: 5px;
-      float: left;
-      li {
-        height: 40px;
-        width: 25%;
-        a {
-          display: block;
-          width: 35px;
-          height: 35px;
-          color: #000;
-          background-color: $blueColor;
-          border-radius: 50%;
-          font-size: 20px;
-          line-height: 35px;
-        }
-        &:last-child {
-          margin-right: 0;
-        }
-        &:hover {
-          background: none;
-        }
-      }
-    }
-  }
-  .comm-qnt {
-    float: right;
-    width: 120px;
-    height: 110px;
-    color: #000;
-    background-color: $blueColor;
-    span {
-      display: block;
-      text-align: center;
-      &:first-child {
-        padding-top: 25px;
-        font-size: 40px;
-      }
-      &:last-child {
-        padding-top: 8px;
-        font-size: 11px;
-        font-family: 'Roboto', sans-serif;
-      }
-    }
-  }
-  .onlysubsc {
-    width: calc(55% - 120px);
-    float: right;
-    text-align: center;
-    padding: 25px 20px;
-    letter-spacing: 1px;
-    span {
-      display: block;
-      &:first-child {
-        font-size: 30px;
-      }
-      &:last-child {
-        font-size: 26.5px;
-      }
-    }
-  }
-}
-
-.whats-new-video {
-  height: 0;
-  overflow: hidden;
-  transition: .3s ease;
-  video {
-    width: 100%;
   }
 }

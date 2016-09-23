@@ -113,8 +113,9 @@
   &-info {
     float: left;
     width: 33%;
-    height: 92%;
-    padding: 15px;
+    height: 100%;
+    padding: 15px 15px 0;
+    position: relative;
     color: #000;
     background-color: #fff;
     &-title {
@@ -166,32 +167,14 @@
         content: '';
         clear: both;
       }
-
     }
-  }
-  .card.social {
-    margin: 0;
-    list-style: none;
-    float: left;
-    padding: 8px 0 0;
-    width: 33%;
-    height: 8%;
-    background-color: $blueColor;
-    li {
-      padding-top: 0;
-      margin-right: 20px;
-      height: 20px;
-      &:first-child {
-        padding-left: 40px;
-      }
-      a {
-        line-height: 1.2;
-      }
-    }
-    &:after {
-      display: block;
-      content: '';
-      clear: both;
+    .social {
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      padding: 0 20px;
+      background-color: $blueColor;
     }
   }
   .item-image {
@@ -276,36 +259,27 @@
 }
 
 .social {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: justify;
+  font-size: 0;
+  line-height: 0;
   font-family: 'IcoMoon';
-  font-size: 22px;
+  &:after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+    height: 0;
+    visibility: hidden;
+  }
   li {
-    float: left;
-    padding-top: 15px;
-    margin-right: 38px;
-    margin-bottom: 20px;
-    line-height: 22px;
-    height: 30px;
-    &:first-child {
-      padding-top: 18px;
-    }
-    &:last-child {
-      margin-right: 0;
-      padding-top: 18px;
-    }
+    line-height: 35px;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 22px;
     &:hover {
       color: #fff;
     }
-  }
-  .fb {
-    font-size: 17px;
-  }
-  .tw {
-    font-size: 19px;
-  }
-  .tumblr {
-    font-size: 16px;
-  }
-  .gplus {
-    font-size: 24px;
   }
 }

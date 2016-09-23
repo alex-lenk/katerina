@@ -34,6 +34,9 @@ $(document).ready(function () {
         $('.music-player').toggleClass("music-player-open");
     });
 
+    $('.play-social-nav .fork').on('click', function () {
+        $('.play-social-nav .social').toggleClass("share-open");
+    });
 
 //Выезжающие панели
     $('.point').on('click', function () {
@@ -243,7 +246,7 @@ $(document).ready(function () {
         $('.overlay').trigger('click');
     });
 
-    
+
     // VIDEO
     $('[data-id="#p1c1"]').on('click', function () {
         setTimeout(function () {
