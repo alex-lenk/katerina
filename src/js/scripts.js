@@ -38,6 +38,12 @@ $(document).ready(function () {
         $('.play-social-nav .social').toggleClass("share-open");
     });
 
+    $('.play-video-post').on('click', function () {
+        $('.youtube-player').addClass("show-youtube-player");
+        $('.play-video-post, .play-social-nav .count-video').hide();
+    });
+
+
 //Выезжающие панели
     $('.point').on('click', function () {
         var i = 6;
@@ -244,28 +250,5 @@ $(document).ready(function () {
     });
     $('.card-close').on('click', function () {
         $('.overlay').trigger('click');
-    });
-
-
-    // VIDEO
-    $('[data-id="#p1c1"]').on('click', function () {
-        setTimeout(function () {
-            videoHeight = $('.whats-new-video video').height();
-        }, 100);
-    });
-    // $('.whats-new-video').css('height', videoHeight + 'px');
-    $('.button.play').on('click', function () {
-        $('.play-social-nav').removeClass('active');
-        var stat = $(this).attr('data-stat');
-        if (stat == "hide") {
-            $('.whats-new-video').css('height', videoHeight);
-            $('.button.play').attr('data-stat', 'view');
-            $('#play-2').addClass('active');
-
-        } else {
-            $('.whats-new-video').css('height', 0);
-            $('.button.play').attr('data-stat', 'hide');
-            $('#play-1').addClass('active');
-        }
     });
 });

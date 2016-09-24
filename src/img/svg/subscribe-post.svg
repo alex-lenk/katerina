@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 83 91">
+    <defs>
+        <style>.cls-1{isolation:isolate;}.cls-2{fill:#5dc4ff;fill-rule:evenodd;}</style>
+    </defs>
+    <title>subscribe post</title>
+    <g id="subscribe_post" data-name="subscribe post" class="cls-1">
+        <g id="subscribe_post-2" data-name="subscribe post">
+            <path class="cls-2"
+                  d="M50.72,80.69C57.16,80.69,62.39,75,62.39,68S57.16,55.28,50.72,55.28,39,61,39,68,44.27,80.69,50.72,80.69ZM78,41c0.23-1.83,4.3-37-28.54-37-31.93,0-29,33.41-28.57,37H8V95H91V41H78ZM49.5,9.78C77.07,9.78,73.05,39.15,72.78,41H26.12C25.7,38,22.46,9.78,49.5,9.78ZM85.81,89.49H13.19V46.66H85.81V89.49Z"
+                  transform="translate(-8 -4)"/>
+        </g>
+    </g>
+</svg>

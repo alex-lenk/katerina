@@ -1458,6 +1458,7 @@ footer .logo {
   overflow: hidden;
   background-color: rgba(0, 0, 0, 0.3);
   transition: .3s ease;
+  position: relative;
 }
 
 .blog-item-content .avatar {
@@ -1471,7 +1472,7 @@ footer .logo {
 }
 
 .blog-item-content .title {
-  padding-top: 15px;
+  padding-top: 9px;
   margin: 0;
   color: #9e9e9e;
   font-size: 19px;
@@ -1494,12 +1495,6 @@ footer .logo {
 
 .blog-post-single .blog-item-content .text {
   font-size: 13px;
-}
-
-.count-video {
-  font-size: 11px;
-  color: #565656;
-  font-family: Arial, sans-serif;
 }
 
 .play-social-nav {
@@ -1592,19 +1587,6 @@ footer .logo {
   color: #000;
 }
 
-.content-blog {
-  margin: 0 420px 0 0;
-}
-
-.content-blog .whats-new-title {
-  text-align: right;
-}
-
-.content-blog .whats-new-title span {
-  display: inline-block;
-  width: 130px;
-}
-
 .comments-block {
   height: 130px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -1624,7 +1606,7 @@ footer .logo {
 }
 
 .comments-lists .comment {
-  padding: 15px;
+  padding: 7px 20px;
   position: relative;
   margin-bottom: 1px;
   background-color: rgba(0, 0, 0, 0.3);
@@ -1637,7 +1619,7 @@ footer .logo {
 .comments-lists .comment .avatar {
   width: 60px;
   height: 60px;
-  margin-right: 20px;
+  margin-right: 25px;
   border-radius: 50%;
   background-color: #ff0000;
   flex: 1 0 60px;
@@ -1716,6 +1698,49 @@ footer .logo {
 
 .subscribing-only div {
   font-size: 27px;
+}
+
+.count-video {
+  font-size: 10px;
+  color: #565656;
+  font-family: Arial, sans-serif;
+}
+
+.subscribe-post {
+  fill: #5dc4ff;
+  position: absolute;
+  top: 3px;
+  right: 7px;
+}
+
+.subscribe-post svg {
+  width: 12px;
+}
+
+.content-blog {
+  margin: 0 420px 0 0;
+}
+
+.content-blog .whats-new-title {
+  text-align: right;
+}
+
+.content-blog .whats-new-title span {
+  display: inline-block;
+  width: 130px;
+}
+
+.youtube-player {
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: .6s ease;
+}
+
+.youtube-player.show-youtube-player {
+  overflow: visible;
+  height: 100%;
+  opacity: 1;
 }
 
 .form-group {
