@@ -2035,6 +2035,19 @@ footer .logo {
   text-align: right;
 }
 
+.sidebar .blog-item-content .avatar {
+  width: 115px;
+  height: 115px;
+}
+
+.sidebar .blog-item-content .title {
+  font-size: 16px;
+}
+
+.sidebar .blog-item-content .text {
+  font-size: 11px;
+}
+
 .whats-new-title {
   margin: 0;
   padding: 10px 0 8px;
