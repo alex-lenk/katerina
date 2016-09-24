@@ -1,0 +1,108 @@
+.form {
+  &-group {
+    margin-bottom: 15px;
+    position: relative;
+  }
+  &-control {
+    width: 100%;
+    height: 40px;
+    padding: 6px 15px;
+    font-size: 14px;
+    color: #b2b1b1;
+    font-family: $CaviarDreamsItalic;
+    background-color: #fff;
+    display: block;
+    line-height: 1.42857143;
+    background-image: none;
+    border: 1px solid #848484;
+    transition: all ease-in-out .15s;
+    &:focus {
+      outline: 0;
+      + label {
+        top: -16px;
+        opacity: 1;
+        left: 0;
+      }
+    }
+    textarea {
+      resize: vertical;
+    }
+  }
+  &-label {
+    display: inline-block;
+    max-width: 100%;
+    position: absolute;
+    top: 9px;
+    left: 15px;
+    font-family: $RobotoCondensed;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 13px;
+    opacity: 0;
+    transition: all ease-in-out .5s;
+  }
+}
+
+.general-form {
+  width: 290px;
+  margin: 0 auto;
+  background: rgba(93, 196, 255, 0.77);
+  padding: 10px 20px 50px;
+  color: #000;
+  text-align: center;
+  text-transform: uppercase;
+  .sign-in {
+    font-size: 20px;
+    color: #f3f2f2;
+    font-family: $CaviarDreams-Bold;
+    letter-spacing: 4px;
+  }
+  .social-circle {
+    margin: 26px 0 16px;
+    li a {
+      width: 42px;
+      height: 42px;;
+      line-height: 42px;
+    }
+  }
+  .form-group {
+    margin-bottom: 12px;
+  }
+  .form-control {
+    height: 38px;
+  }
+  .remember {
+    font-size: 10px;
+    font-family: $CaviarDreams-Bold;
+    text-decoration: underline;
+    color: #000;
+    display: block;
+    padding: 8px 0 0;
+    margin-bottom: 20px;
+    letter-spacing: 1.5px;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  .button {
+    width: 120px;
+    padding: 12px 5px;
+    font-family: $CaviarDreams-Bold;
+    font-size: 11px;
+    color: #fff;
+    &:hover {
+      background-color: #000;
+      color: $blueColor;
+    }
+  }
+  hr {
+    margin: 22px 0 32px;
+    border: 1px solid #000;
+  }
+  .b-text {
+    font-size: 16px;
+    font-family: $BebasNeueRegular;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+  }
+}

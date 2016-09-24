@@ -3,7 +3,7 @@ $opacity-black: rgba(0, 0, 0, 0.5);
 $blueColor: #5dc4ff;
 $red: #ff0000;
 
-$BebasNeueRegular: "BebasNeueRegular", sans-serif;
+$BebasNeueRegular: 'BebasNeueRegular', sans-serif;
 $BebasNeueBold: "BebasNeueBold", sans-serif;
 
 $CaviarDreams: "CaviarDreams", sans-serif;
@@ -12,7 +12,6 @@ $CaviarDreams-Bold: "CaviarDreams-Bold", sans-serif;
 
 $RobotoCondensed: 'Roboto Condensed', sans-serif;
 $Roboto: 'Roboto', sans-serif;
-
 html {
   height: 100%;
 }
@@ -27,9 +26,13 @@ body {
   background: url(../img/bg-image.jpg) center top no-repeat #000;
 }
 
-a {
+a, .as-link {
   color: inherit;
   text-decoration: none;
+}
+
+.as-link {
+  cursor: pointer;
 }
 
 p {

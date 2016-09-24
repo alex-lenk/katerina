@@ -278,29 +278,30 @@
       color: #5dc4ff;
     }
   }
-  .social li {
-    text-align: center;
-    a {
-      display: block;
-      width: 35px;
-      height: 35px;
-      color: #000;
-      background-color: #5dc4ff;
-      border-radius: 50%;
-      font-size: 20px;
-      line-height: 35px;
-      &:hover {
-        color: #5dc4ff;
-        background-color: #fff;
-      }
-    }
-  }
   &-only {
     letter-spacing: 1px;
     font-family: $BebasNeueRegular;
     font-size: 30px;
     div {
       font-size: 27px;
+    }
+  }
+}
+
+.social-circle li {
+  text-align: center;
+  a {
+    display: block;
+    width: 35px;
+    height: 35px;
+    color: #000;
+    background-color: #5dc4ff;
+    border-radius: 50%;
+    font-size: 20px;
+    line-height: 35px;
+    &:hover {
+      color: #5dc4ff;
+      background-color: #fff;
     }
   }
 }

@@ -34,11 +34,6 @@
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#profile"></use>
                 </svg>
             </li>
-            <li class="basket" data-count="1">
-                <svg class="icon" viewBox="0 0 90.98 91">
-                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#basket"></use>
-                </svg>
-            </li>
         </ul>
         <div class="close"></div>
     </header>
@@ -82,7 +77,7 @@
                             <ul class="widget">
                                 <li><a href="#" class="post">
                                     <img src="img/ex-avatar.jpg" alt="" class="post-img">
-                                <span class="post-content">
+                                    <span class="post-content">
                                     <span class="post-title">Name post</span>
                                     <span class="post-text">
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultricies ante
@@ -97,7 +92,7 @@
 
                                 <li><a href="#" class="post">
                                     <img src="img/ex-avatar.jpg" alt="" class="post-img">
-                                <span class="post-content">
+                                    <span class="post-content">
                                     <span class="post-title">Name post</span>
                                     <span class="post-text">
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultricies ante
@@ -112,7 +107,7 @@
 
                                 <li><a href="#" class="post">
                                     <img src="img/ex-avatar.jpg" alt="" class="post-img">
-                                <span class="post-content">
+                                    <span class="post-content">
                                     <span class="post-title">Name post</span>
                                     <span class="post-text">
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultricies ante
@@ -644,8 +639,16 @@
     <header class="moving-panel-header">
         <h2 class="title">online shop</h2>
         <ul class="info">
-            <li class="profile"><a href="#"></a></li>
-            <li class="basket" data-count="1"><a href="#"></a></li>
+            <li>
+                <svg class="profile" viewBox="0 0 90.98 91">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#profile"></use>
+                </svg>
+            </li>
+            <li class="basket-count" data-count="1">
+                <svg class="basket" viewBox="0 0 90.98 91">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#basket"></use>
+                </svg>
+            </li>
         </ul>
         <div class="close"></div>
     </header>
@@ -831,7 +834,11 @@
     <header class="moving-panel-header">
         <h2 class="title">my gallerys</h2>
         <ul class="info">
-            <li class="profile"><a href="#"></a></li>
+            <li class="profile">
+                <svg class="icon" viewBox="0 0 90.98 91">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#profile"></use>
+                </svg>
+            </li>
         </ul>
         <div class="close"></div>
     </header>
@@ -856,7 +863,11 @@
     <header class="moving-panel-header">
         <h2 class="title">contact me</h2>
         <ul class="info">
-            <li class="profile"><a href="#"></a></li>
+            <li class="profile">
+                <svg class="icon" viewBox="0 0 90.98 91">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#profile"></use>
+                </svg>
+            </li>
         </ul>
         <div class="close"></div>
     </header>
@@ -946,25 +957,25 @@
 
             <form action="#" class="feedback-form">
                 <h2 class="feedback-title">Serious inquiries only</h2>
-                <div class="feedback-group">
-                    <input type="text" id="feedback-surname" class="feedback-control" placeholder="Name Surname">
-                    <label for="feedback-surname">Name Surname</label>
+                <div class="form-group">
+                    <input type="text" id="feedback-surname" class="form-control" placeholder="Name Surname">
+                    <label class="form-label" for="feedback-surname">Name Surname</label>
                 </div>
-                <div class="feedback-group">
-                    <input type="email" id="feedback-email" class="feedback-control" placeholder="Email">
-                    <label for="feedback-email">Email</label>
+                <div class="form-group">
+                    <input type="email" id="feedback-email" class="form-control" placeholder="Email">
+                    <label class="form-label" for="feedback-email">Email</label>
                 </div>
-                <div class="feedback-group">
-                    <input type="text" id="feedback-location" class="feedback-control" placeholder="Contry / City">
-                    <label for="feedback-location">Contry / City</label>
+                <div class="form-group">
+                    <input type="text" id="feedback-location" class="form-control" placeholder="Contry / City">
+                    <label class="form-label" for="feedback-location">Contry / City</label>
                 </div>
-                <div class="feedback-group">
-                    <input type="text" id="feedback-phone" class="feedback-control" placeholder="Phone">
-                    <label for="feedback-phone">Phone</label>
+                <div class="form-group">
+                    <input type="text" id="feedback-phone" class="form-control" placeholder="Phone">
+                    <label class="form-label" for="feedback-phone">Phone</label>
                 </div>
-                <div class="feedback-group">
-                    <textarea id="feedback-message" class="feedback-control" rows="6" placeholder="Message"></textarea>
-                    <label for="feedback-message">Message</label>
+                <div class="form-group">
+                    <textarea id="feedback-message" class="form-control" rows="6" placeholder="Message"></textarea>
+                    <label class="form-label" for="feedback-message">Message</label>
                 </div>
 
                 <div class="no-robot text-center">
@@ -980,7 +991,11 @@
     <header class="moving-panel-header">
         <h2 class="title">members login</h2>
         <ul class="info">
-            <li class="profile"><a href="#"></a></li>
+            <li>
+                <svg class="profile" viewBox="0 0 90.98 91">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#profile"></use>
+                </svg>
+            </li>
         </ul>
         <div class="close"></div>
     </header>
@@ -993,33 +1008,49 @@
         </nav>
         <div class="wrapper">
 
-            <div class="members-form">
-                <div class="form three">
-                    <h2 class="members-form-title">WELCOME</h2>
-                    <div class="form-text">
-                        <span class="icon profile"></span>
-                        Signing up or sign in with social is quicker than email No extra passwords to remem- ber - no
-                        brain fail.
+            <form action="#" class="general-form members-form">
+                <h2 class="members-form-title">WELCOME</h2>
+                <div class="info-profile">
+                    <div class="profile-box">
+                        <svg class="profile" viewBox="0 0 90.98 91">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#profile"></use>
+                        </svg>
                     </div>
-                    <span class="sign-in">SIGN IN</span>
-                    <div class="socials">
-                        <a href="#"><span class="icon tw"></span></a>
-                        <a href="#"><span class="icon fb"></span></a>
-                        <a href="#"><span class="icon gp"></span></a>
-                        <a href="#"><span class="icon mail"></span></a>
-                    </div>
-                    <form action="#">
-                        <input type="text" placeholder="e-mail">
-                        <input type="text" placeholder="password">
-
-                        <a href="#" class="remember">Remember password</a>
-                        <button type="submit">SIGN IN</button>
-                    </form>
-                    <hr/>
-                    <span class="b-text">Don't have an account?</span>
-                    <a href="#" class="signing">SIGNING UP</a>
+                    <div class="text">Signing up or sign in with social is quicker than email No extra passwords to
+                        remem- ber - no brain fail.</div>
                 </div>
-            </div>
+                <div class="members-form-body">
+                    <div class="sign-in">SIGN IN</div>
+
+                    <ul class="social social-circle">
+                        <li class="tw"><a href="">&#xea96;</a></li>
+                        <li class="fb"><a href="">&#xea90;</a></li>
+                        <li class="gplus"><a href="">&#xea8b;</a></li>
+                        <li class="msg"><a href="">&#xe945;</a></li>
+                    </ul>
+
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="email" placeholder="e-mail">
+                        <label for="email" class="form-label">e-mail</label>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="password" placeholder="password">
+                        <label for="password" class="form-label">password</label>
+                    </div>
+
+                    <span class="as-link remember">Remember password</span>
+
+                    <button class="button button-default">SIGN IN</button>
+
+                    <hr>
+
+                    <div class="b-text">Don't have an account?</div>
+
+                    <button class="button button-default">SIGNING UP</button>
+                </div>
+
+            </form>
         </div>
     </div>
 </section>
