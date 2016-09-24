@@ -1,35 +1,40 @@
 .subscription-has-expired {
-  width: 310px;
-  padding: 30px;
-  margin: 40px;
+  width: 290px;
+  padding: 8px 15px 30px;
+  margin: 40px 0 0 42px;
   text-transform: uppercase;
   background-color: rgba(93, 196, 255, .8);
   color: #000;
   box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, .15);
   font-family: $BebasNeueRegular;
   .head {
-    margin-bottom: 30px;
+    margin-bottom: 35px;
     text-align: center;
+    line-height: 1;
   }
   .title {
     font-size: 160px;
+    line-height: 150px;
   }
   .text {
-    margin: 10px 0 15px;
+    margin: 0 0 10px;
     font-size: 30px;
     &-2 {
       font-size: 13px;
-      font-family: $CaviarDreams;
-      font-weight: bold;
+      font-family: $CaviarDreams-Bold;
+      letter-spacing: 2px;
     }
     &-3 {
       margin-top: 5px;
-      font-size: 75%;
+      font-size: 10px;
       display: block;
     }
   }
+  .select-subscription {
+    padding: 0 20px;
+  }
   .label-block {
-    margin-bottom: 15px;
+    margin-bottom: 18px;
     display: block;
     font-size: 15px;
     @include cf;
@@ -53,5 +58,11 @@
     width: 100%;
     margin-top: 30px;
     font-size: 11px;
+    letter-spacing: 2px;
+    font-family: $CaviarDreams-Bold;
+    &.button-default:hover {
+      background-color: #ffffff;
+      color: #000;
+    }
   }
 }

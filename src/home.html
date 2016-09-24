@@ -608,6 +608,7 @@
         </div>
     </div>
 </section>
+
 <section class="moving-panel" id="p2" data-name="online-shop">
     <header class="moving-panel-header">
         <h2 class="title">online shop</h2>
@@ -800,6 +801,7 @@
         </aside>
     </div>
 </section>
+
 <section class="moving-panel" id="p3" data-name="my-gallerys">
     <header class="moving-panel-header">
         <h2 class="title">my gallerys</h2>
@@ -826,6 +828,7 @@
         </div>
     </div>
 </section>
+
 <section class="moving-panel" id="p4" data-name="contact-me">
     <header class="moving-panel-header">
         <h2 class="title">contact me</h2>
@@ -954,6 +957,7 @@
 
     </div>
 </section>
+
 <section class="moving-panel" id="p5" data-name="members-login">
     <header class="moving-panel-header">
         <h2 class="title">members login</h2>
@@ -972,7 +976,8 @@
         </nav>
         <div class="wrapper">
 
-            <form action="#" class="general-form members-form">
+            <!-- @todo Delete style="display: inline-block;vertical-align:top;" -->
+            <form action="#" class="general-form members-form" style="display: inline-block;vertical-align:top;">
                 <h2 class="members-form-title">WELCOME</h2>
                 <div class="info-profile">
                     <div class="profile-box">
@@ -989,11 +994,11 @@
                     //= templates/social-circle.html
 
                     <div class="form-group">
-                        <input type="text" class="form-control" id="email" placeholder="e-mail">
+                        <input type="email" class="form-control" id="email" placeholder="e-mail">
                         <label for="email" class="form-label">e-mail</label>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group last-element">
                         <input type="text" class="form-control" id="password" placeholder="password">
                         <label for="password" class="form-label">password</label>
                     </div>
@@ -1008,7 +1013,48 @@
 
                     <button class="button button-default">SIGNING UP</button>
                 </div>
+            </form>
 
+            <!-- @todo Delete style="display: inline-block;vertical-align:top;" -->
+            <form action="#" class="general-form members-form" style="display: inline-block;vertical-align:top;">
+                <h2 class="members-form-title">WELCOME</h2>
+                <div class="info-profile">
+                    <div class="profile-box">
+                        <svg class="profile" viewBox="0 0 90.98 91">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#profile"></use>
+                        </svg>
+                    </div>
+                    <div class="text">Signing up or sign in with social is quicker than email No extra passwords to
+                        remem- ber - no brain fail.</div>
+                </div>
+                <div class="members-form-body">
+                    <div class="sign-in">SIGNING UP</div>
+
+                    //= templates/social-circle.html
+
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="name" placeholder="Name">
+                        <label for="name" class="form-label">e-mail</label>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="email" class="form-control" id="email" placeholder="e-mail">
+                        <label for="email" class="form-label">e-mail</label>
+                    </div>
+
+                    <div class="form-group last-element">
+                        <input type="text" class="form-control" id="password" placeholder="password">
+                        <label for="password" class="form-label">password</label>
+                    </div>
+
+                    <button class="button button-default">SIGNING UP</button>
+
+                    <hr>
+
+                    <div class="b-text">Already registered?</div>
+
+                    <button class="button button-default">SIGN IN</button>
+                </div>
             </form>
         </div>
     </div>

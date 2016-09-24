@@ -634,9 +634,9 @@ footer .logo {
 }
 
 .subscription-has-expired {
-  width: 310px;
-  padding: 30px;
-  margin: 40px;
+  width: 290px;
+  padding: 8px 15px 30px;
+  margin: 40px 0 0 42px;
   text-transform: uppercase;
   background-color: rgba(93, 196, 255, 0.8);
   color: #000;
@@ -645,33 +645,39 @@ footer .logo {
 }
 
 .subscription-has-expired .head {
-  margin-bottom: 30px;
+  margin-bottom: 35px;
   text-align: center;
+  line-height: 1;
 }
 
 .subscription-has-expired .title {
   font-size: 160px;
+  line-height: 150px;
 }
 
 .subscription-has-expired .text {
-  margin: 10px 0 15px;
+  margin: 0 0 10px;
   font-size: 30px;
 }
 
 .subscription-has-expired .text-2 {
   font-size: 13px;
-  font-family: "CaviarDreams", sans-serif;
-  font-weight: bold;
+  font-family: "CaviarDreams-Bold", sans-serif;
+  letter-spacing: 2px;
 }
 
 .subscription-has-expired .text-3 {
   margin-top: 5px;
-  font-size: 75%;
+  font-size: 10px;
   display: block;
 }
 
+.subscription-has-expired .select-subscription {
+  padding: 0 20px;
+}
+
 .subscription-has-expired .label-block {
-  margin-bottom: 15px;
+  margin-bottom: 18px;
   display: block;
   font-size: 15px;
 }
@@ -704,6 +710,13 @@ footer .logo {
   width: 100%;
   margin-top: 30px;
   font-size: 11px;
+  letter-spacing: 2px;
+  font-family: "CaviarDreams-Bold", sans-serif;
+}
+
+.subscription-has-expired .button.button-default:hover {
+  background-color: #ffffff;
+  color: #000;
 }
 
 .music-button {
@@ -1805,6 +1818,10 @@ footer .logo {
   margin-bottom: 12px;
 }
 
+.general-form .form-group.last-element {
+  margin-bottom: 20px;
+}
+
 .general-form .form-control {
   height: 38px;
 }
@@ -1815,7 +1832,6 @@ footer .logo {
   text-decoration: underline;
   color: #000;
   display: block;
-  padding: 8px 0 0;
   margin-bottom: 20px;
   letter-spacing: 1.5px;
 }
