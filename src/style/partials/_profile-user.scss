@@ -358,6 +358,126 @@
       }
     }
   }
+  .comment-block {
+    border-top: 1px solid #ddd;
+    padding: 0 10px;
+    .comment {
+      position: relative;
+      border-bottom: 1px solid #ddd;
+      padding: 15px 0;
+    }
+    .avatar {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background-color: red;
+    }
+    .comment-message {
+      font-style: italic;
+      font-size: 13px;
+      color: #000;
+      margin-left: 80px;
+      line-height: 1.8;
+      width: calc(100% - 80px);
+    }
+  }
+  .ask {
+    padding-right: 25px;
+    font-family: 'Roboto', sans-serif;
+    textarea {
+      font-size: 16px;
+      font-style: italic;
+      width: 100%;
+      height: 120px;
+      resize: none;
+      margin-bottom: 15px;
+      padding: 20px;
+      border: none;
+      outline: none;
+      background-color: #f7f7f7;
+      box-shadow: 0 5px 10px -3px #ccc inset;
+    }
+    textarea::-moz-selection {
+      color: #111;
+      background: $blueColor;
+    }
+    textarea::selection {
+      color: #111;
+      background: $blueColor;
+    }
+    .button {
+      width: 190px;
+      margin: auto;
+      margin-bottom: 20px;
+      background-color: #000;
+      color: $blueColor;
+    }
+  }
+
+  .favorites-nav {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 100%;
+    font-size: 20px;
+    color: #000;
+    ul {
+      li {
+        float: left;
+        margin-right: 20px;
+        padding: 5px 10px;
+        &.active {
+          background-color: $blueColor;
+        }
+      }
+    }
+  }
+  .favorites-grid {
+    .item {
+      .img {
+        &::after {
+          content: none;
+        }
+        i {
+          position: absolute;
+          z-index: 1;
+          top: 0;
+          right: 0;
+          width: 20px;
+          height: 20px;
+          background-color: #000;
+          cursor: pointer;
+          &::before, &::after {
+            position: absolute;
+            top: 9px;
+            left: -4px;
+            content: '';
+            width: 28px;
+            height: 1px;
+            transform: rotate(45deg);
+            background-color: $blueColor;
+          }
+          &::after {
+            transform: rotate(-45deg);
+          }
+          &:hover {
+            &::before, &::after {
+              background-color: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .purchase, .favorites {
+    position: relative;
+    padding: 70px;
+  }
 }
 
 .color-picker {
@@ -499,3 +619,4 @@
     }
   }
 }
+

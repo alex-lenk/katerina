@@ -254,4 +254,30 @@ $(document).ready(function () {
     $('.card-close').on('click', function () {
         $('.overlay').trigger('click');
     });
+
+    //photo-slider
+    var owl = $("#owl-demo");
+    owl.owlCarousel({
+        pagination: false,
+        items: 6,
+        itemsDesktop: [1300, 5],
+        itemsDesktopSmall: [1024, 4],
+        itemsTablet: [850, 3],
+        itemsMobile: [700, 2]
+    });
+    $('.arrow-next').click(function () {
+        owl.trigger('owl.next');
+    });
+    $('.arrow-prev').click(function () {
+        owl.trigger('owl.prev');
+    });
+
+    $('.photo-slide').on('click', function () {
+        var id = $(this).attr('id');
+        $('.main-image').removeClass('now');
+        $('.photo-slide').removeClass('now');
+        $(this).addClass('now');
+        $('[data-id="' + id + '"]').addClass('now');
+
+    });
 });

@@ -128,9 +128,8 @@
     float: left;
     width: 145px;
     margin: 0 20px 0 60px;
-    font-family: 'CaviarDreams', sans-serif;
+    font-family: $CaviarDreams-Bold;
     font-size: 10px;
-    font-weight: bold;
     color: white;
     text-transform: uppercase;
     ul {
@@ -561,4 +560,257 @@
   top: 0;
   left: 0;
   z-index: 90;
+}
+
+// BIO
+.tab-bio {
+  position: relative;
+  .bio-container {
+    margin-left: 10px;
+    margin-right: 25px;
+  }
+  .main-image {
+    display: none;
+    width: 100%;
+    height: 370px;
+    background: center 25% no-repeat;
+    &.now {
+      display: block;
+    }
+    &.img-slide-1 {
+      background-image: url(../img/bg_image3.jpg);
+      background-size: cover;
+    }
+    &.img-slide-2 {
+      background-image: url(../img/bg_header.jpg);
+      background-size: cover;
+    }
+    &.img-slide-3 {
+      background-image: url(../img/bg-image.jpg);
+      background-size: cover;
+    }
+    &.img-slide-4 {
+      background-image: url(../img/main-img.jpg);
+      background-size: cover;
+    }
+    &.img-slide-5 {
+      background-image: url(../img/bg_image3.jpg);
+      background-size: cover;
+    }
+    &.img-slide-6 {
+      background-image: url(../img/bg_header.jpg);
+      background-size: cover;
+    }
+    &.img-slide-7 {
+      background-image: url(../img/main-img.jpg);
+      background-size: cover;
+    }
+    &.img-slide-8 {
+      background-image: url(../img/bg-image.jpg);
+      background-size: cover;
+    }
+  }
+  .photo-slider {
+    position: relative;
+    .arrow-next, .arrow-prev {
+      top: 70px;
+      position: absolute;
+      width: 15px;
+      height: 30px;
+      cursor: pointer;
+      &::after {
+        position: absolute;
+        z-index: 2;
+        display: block;
+        content: '';
+        width: 18px;
+        height: 18px;
+        transform: rotate(45deg);
+        border: 1px solid $blueColor;
+      }
+      &:hover::after {
+        border-color: #fff;
+      }
+    }
+    .arrow-next {
+      right: -18px;
+      &::after {
+        border-bottom: 0;
+        border-left: 0;
+      }
+    }
+    .arrow-prev {
+      left: -20px;
+      &::after {
+        border-top: 0;
+        border-right: 0;
+      }
+    }
+  }
+  .photo-slide {
+    height: 160px;
+    margin-right: 1px;
+    margin-top: 1px;
+    cursor: pointer;
+  }
+  #slide-1 {
+    background: url(../img/preview-1.jpg) center no-repeat;
+    background-size: cover;
+  }
+  #slide-2 {
+    background: url(../img/preview-2.jpg) center no-repeat;
+    background-size: cover;
+  }
+  #slide-3 {
+    background: url(../img/preview-3.jpg) center no-repeat;
+    background-size: cover;
+  }
+  #slide-4 {
+    background: url(../img/preview-4.jpg) center no-repeat;
+    background-size: cover;
+  }
+  #slide-5 {
+    background: url(../img/preview-5.jpg) center no-repeat;
+    background-size: cover;
+  }
+  #slide-6 {
+    background: url(../img/preview-6.jpg) center no-repeat;
+    background-size: cover;
+  }
+  #slide-7 {
+    background: url(../img/preview-0.jpg) center no-repeat;
+    background-size: cover;
+  }
+  #slide-8 {
+    background: url(../img/preview-2.jpg) center no-repeat;
+    background-size: cover;
+  }
+
+  .about {
+    float: left;
+    color: #fff;
+    padding: 25px 0;
+    font-family: $RobotoCondensed;
+    font-weight: 300;
+    width: calc(100% - 180px);
+    font-size: 13px;
+    letter-spacing: 1px;
+    p {
+      margin-bottom: 8px;
+      line-height: 1.5;
+    }
+  }
+  .footer-bio {
+    float: right;
+    width: 150px;
+    text-align: left;
+    clear: none;
+    margin: 0;
+    li:nth-child(3) {
+      margin-right: 0;
+    }
+  }
+
+  /*
+ * 	Core Owl Carousel CSS File
+ *	v1.3.3
+ */
+
+  /* clearfix */
+  .owl-carousel .owl-wrapper:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+  }
+  /* display none until init */
+  .owl-carousel {
+    display: none;
+    position: relative;
+    width: 100%;
+    -ms-touch-action: pan-y;
+  }
+  .owl-carousel .owl-wrapper {
+    display: none;
+    position: relative;
+    -webkit-transform: translate3d(0px, 0px, 0px);
+  }
+  .owl-carousel .owl-wrapper-outer {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+  }
+  .owl-carousel .owl-wrapper-outer.autoHeight {
+    -webkit-transition: height 500ms ease-in-out;
+    -moz-transition: height 500ms ease-in-out;
+    -ms-transition: height 500ms ease-in-out;
+    -o-transition: height 500ms ease-in-out;
+    transition: height 500ms ease-in-out;
+  }
+
+  .owl-carousel .owl-item {
+    float: left;
+  }
+  .owl-controls .owl-page,
+  .owl-controls .owl-buttons div {
+    cursor: pointer;
+  }
+  .owl-controls {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+
+  /* mouse grab icon */
+  .grabbing {
+    cursor: url(../img/grabbing.png) 8 8, move;
+  }
+
+  /* fix */
+  .owl-carousel .owl-wrapper,
+  .owl-carousel .owl-item {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+  }
+}
+
+.stay-connected {
+  display: block;
+  width: 250px;
+  margin: 0 auto;
+  padding-top: 20px;
+  text-align: center;
+  font-size: 10px;
+  clear: both;
+  &-title {
+    padding: 10px 0;
+    margin-bottom: 10px;
+    font-family: $CaviarDreams-Bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 10px;
+    border-bottom: 1px solid $blueColor;
+    i {
+      color: #fff;
+    }
+  }
+  .social {
+    &:after {
+      display: none;
+    }
+    li {
+      width: 33%;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+  }
 }
