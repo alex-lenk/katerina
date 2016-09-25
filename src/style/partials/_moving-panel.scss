@@ -8,14 +8,14 @@
 #p2 {
   z-index: 19;
   .content, header {
-    padding-left: 55px;
+    padding-left: 91px;
   }
 }
 
 #p3 {
   z-index: 17;
   .content, header {
-    padding-left: 95px;
+    padding-left: 134px;
   }
 }
 
@@ -57,8 +57,8 @@
   }
   //.moving-panel-header
   &-header {
-    margin: 0 0 20px 60px;
-    padding: 20px 30px 0 0;
+    margin: 0 0 13px 60px;
+    padding: 8px 30px 0 0;
     font-size: 40px;
     font-weight: 700;
     display: flex;
@@ -67,43 +67,43 @@
     z-index: 7;
     &::after {
       height: 1px;
-      margin-bottom: 4px;
+      margin-bottom: 1px;
       display: block;
       content: '•';
       width: 100%;
       background-color: #5dc4ff;
       font-size: 20px;
-      line-height: 4px;
+      line-height: 2px;
       text-shadow: -2px 0 0 #0a0b0b;
     }
     .title {
       margin: 0;
-      padding-right: 20px;
+      padding-right: 15px;
       white-space: nowrap;
       display: inline;
       font-size: 40px;
       font-family: $BebasNeueBold;
       font-weight: normal;
-      letter-spacing: 1px;
+      letter-spacing: 2px;
     }
     .info {
       margin: 0;
       padding: 0;
       position: absolute;
-      right: 60px;
-      top: 21px;
+      right: 37px;
+      top: 10px;
       list-style: none;
       li {
-        width: 30px;
-        height: 30px;
-        margin-right: 10px;
+        width: 35px;
+        height: 35px;
+        margin-right: 11px;
         display: inline-block;
         position: relative;
         cursor: pointer;
         background-color: #000;
         border: 1px solid #5dc4ff;
         border-radius: 50%;
-        line-height: 30px;
+        line-height: 35px;
         text-align: center;
         transition: .3s ease;
         svg {
@@ -128,6 +128,10 @@
         bottom: -18px;
         right: -7px;
       }
+    }
+    .close-defaut {
+      top: 16px;
+      right: -14px;
     }
   }
 }

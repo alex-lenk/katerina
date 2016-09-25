@@ -17,6 +17,7 @@
 @import "partials/what-new";
 @import "partials/form";
 @import "partials/social";
+@import "partials/gallery";
 
 .blur {
   filter: blur(2px);
@@ -117,7 +118,7 @@
   .item-list {
     display: inline-block;
     float: left;
-    width: 130px;
+    width: 145px;
     margin: 0 20px 0 60px;
     font-family: 'CaviarDreams', sans-serif;
     font-size: 10px;
@@ -150,7 +151,7 @@
     display: none;
     float: left;
     width: calc(100% - 310px);
-    margin-right: 100px;
+    margin-right: 80px;
     &-title {
       width: 60%;
       margin: -20px 0 20px 65px;
@@ -421,7 +422,7 @@
 .wrapper {
   float: left;
   width: calc(100% - 310px);
-  margin-right: 100px;
+  margin-right: 85px;
 }
 
 #contacts-slider {
