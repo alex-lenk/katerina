@@ -5,6 +5,7 @@ $red: #ff0000;
 
 $BebasNeueRegular: 'BebasNeueRegular', sans-serif;
 $BebasNeueBold: "BebasNeueBold", sans-serif;
+$BebasNeueBook: 'BebasNeueBook', sans-serif;
 
 $CaviarDreams: "CaviarDreams", sans-serif;
 $CaviarDreamsItalic: "CaviarDreams-BoldItalic", sans-serif;
@@ -19,6 +20,7 @@ html {
 body {
   width: 100%;
   height: 100%;
+  margin: 0;
   font-family: $BebasNeueRegular;
   line-height: 1.4;
   overflow: hidden;

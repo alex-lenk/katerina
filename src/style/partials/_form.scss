@@ -114,11 +114,13 @@
   &-form {
     .no-robot {
       width: 300px;
-      margin: 0 auto;
+      margin: 95px auto 0;
       text-align: center;
       .button {
-        margin-top: 15px;
+        margin-top: 11px;
         width: 100%;
+        font-size: 13px;
+        letter-spacing: 2px;
       }
     }
     .form-control {

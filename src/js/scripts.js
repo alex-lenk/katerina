@@ -5,7 +5,7 @@
 
 (function ($) {
     $(function () {
-        $('ul.tabs__caption').on('click', 'li:not(.active)', function () {
+        $('ul.nav-tabs').on('click', 'li:not(.active)', function () {
             $(this)
                 .addClass('active').siblings().removeClass('active')
                 .closest('div.tabs').find('div.tabs__content').removeClass('active').eq($(this).index()).addClass('active');
@@ -222,6 +222,9 @@ $(document).ready(function () {
         theme: 'minimal'
     });
 
+    $(".scroll-container").mCustomScrollbar({
+        theme: 'minimal'
+    });
 
 // online-shop
     $('.item-grid-info').on('click', function () {
