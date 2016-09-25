@@ -280,4 +280,52 @@ $(document).ready(function () {
         $('[data-id="' + id + '"]').addClass('now');
 
     });
+
+
+    /* ~ ~ ~ MODAL-WINDOW (21.09.16) ~ ~ ~ */
+    $('.modal-window').on('show', function () {
+        $('.moving-panel').addClass('blur');
+        $('.music').addClass('blur');
+        $('.point').addClass('blur');
+        $('.main-footer').addClass('blur');
+        $('.overlay').css('display', 'block');
+        setTimeout(function () {
+            $('.overlay').css('background-color', 'rgba(0,0,0,0.6)');
+        }, 50);
+    });
+    $('.overlay').on('click', function () {
+        $('.overlay').css('background-color', 'rgba(0,0,0,0)');
+        setTimeout(function () {
+            $('.overlay').css('display', 'none');
+        }, 300);
+        $('.modal-window').css('display', 'none');
+        $('.moving-panel').removeClass('blur');
+        $('.music').removeClass('blur');
+        $('.point').removeClass('blur');
+        $('.main-footer').removeClass('blur');
+        $('.pay-cont').css('display', 'block');
+        $('.order-cont').css('display', 'none');
+    });
+    $('.card-close').on('click', function () {
+        $('.overlay').trigger('click');
+    });
+
+// online-shop
+    $('.shop-grid .item').on('click', function () {
+        $('.item-card').css('display', 'block');
+        $('[name="card-photo"]').prop('checked', 'false');
+        $('[name="card-photo"]:first-of-type').prop('checked', 'true');
+        $('.modal-window').trigger('show');
+
+    });
+
+    $('.basket').on('click', function () {
+        $('.basket-card').css('display', 'block');
+        $('.modal-window').trigger('show');
+    });
+    $('.checkout').on('click', function () {
+        $('.pay-cont').css('display', 'none');
+        $('.order-cont').css('display', 'block');
+    });
+    /* ~ ~ ~ END OF MODAL-WINDOW (21.09.16) ~ ~ ~ */
 });
