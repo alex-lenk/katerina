@@ -222,7 +222,7 @@ $(document).ready(function () {
         theme: 'minimal'
     });
 
-    $(".scroll-container").mCustomScrollbar({
+    $(".scroll-container,.wrapper").mCustomScrollbar({
         theme: 'minimal'
     });
 
@@ -259,7 +259,7 @@ $(document).ready(function () {
     var owl = $("#owl-demo");
     owl.owlCarousel({
         pagination: false,
-        items: 6,
+        items: 7,
         itemsDesktop: [1300, 5],
         itemsDesktopSmall: [1024, 4],
         itemsTablet: [850, 3],

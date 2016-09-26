@@ -432,17 +432,16 @@
 }
 
 #contacts-slider {
-  margin-bottom: 15px;
   .owl-item {
     background-color: rgba(0, 0, 0, 0.3);
   }
   .item img {
     float: left;
     height: auto;
-    margin-right: 15px;
+    margin-right: 20px;
   }
   .slider-text {
-    padding: 15px;
+    padding: 10px;
     h3 {
       font-size: 18px;
       color: #5dc4ff;
@@ -452,7 +451,7 @@
     }
     p {
       margin: 0;
-      font-size: 16px;
+      font-size: 13px;
       font-family: $RobotoCondensed;
       font-style: italic;
       font-weight: 300;
@@ -467,7 +466,7 @@
   display: block;
   width: 6px;
   height: 6px;
-  margin-right: 20px;
+  margin-right: 27px;
   border-radius: 50%;
   background-color: #fff;
 }
@@ -525,7 +524,7 @@
   &::before {
     transform: rotate(-45deg)
   }
-  &-defaut {
+  &-default {
     &::after,
     &::before {
       background-color: #fff;
@@ -573,40 +572,9 @@
     width: 100%;
     height: 370px;
     background: center 25% no-repeat;
+    overflow: hidden;
     &.now {
       display: block;
-    }
-    &.img-slide-1 {
-      background-image: url(../img/bg_image3.jpg);
-      background-size: cover;
-    }
-    &.img-slide-2 {
-      background-image: url(../img/bg_header.jpg);
-      background-size: cover;
-    }
-    &.img-slide-3 {
-      background-image: url(../img/bg-image.jpg);
-      background-size: cover;
-    }
-    &.img-slide-4 {
-      background-image: url(../img/main-img.jpg);
-      background-size: cover;
-    }
-    &.img-slide-5 {
-      background-image: url(../img/bg_image3.jpg);
-      background-size: cover;
-    }
-    &.img-slide-6 {
-      background-image: url(../img/bg_header.jpg);
-      background-size: cover;
-    }
-    &.img-slide-7 {
-      background-image: url(../img/main-img.jpg);
-      background-size: cover;
-    }
-    &.img-slide-8 {
-      background-image: url(../img/bg-image.jpg);
-      background-size: cover;
     }
   }
   .photo-slider {
@@ -652,38 +620,38 @@
     margin-top: 1px;
     cursor: pointer;
   }
-  #slide-1 {
-    background: url(../img/preview-1.jpg) center no-repeat;
-    background-size: cover;
-  }
-  #slide-2 {
-    background: url(../img/preview-2.jpg) center no-repeat;
-    background-size: cover;
-  }
-  #slide-3 {
-    background: url(../img/preview-3.jpg) center no-repeat;
-    background-size: cover;
-  }
-  #slide-4 {
-    background: url(../img/preview-4.jpg) center no-repeat;
-    background-size: cover;
-  }
-  #slide-5 {
-    background: url(../img/preview-5.jpg) center no-repeat;
-    background-size: cover;
-  }
-  #slide-6 {
-    background: url(../img/preview-6.jpg) center no-repeat;
-    background-size: cover;
-  }
-  #slide-7 {
-    background: url(../img/preview-0.jpg) center no-repeat;
-    background-size: cover;
-  }
-  #slide-8 {
-    background: url(../img/preview-2.jpg) center no-repeat;
-    background-size: cover;
-  }
+  //#slide-1 {
+  //  background: url(../img/preview-1.jpg) center no-repeat;
+  //  background-size: cover;
+  //}
+  //#slide-2 {
+  //  background: url(../img/preview-2.jpg) center no-repeat;
+  //  background-size: cover;
+  //}
+  //#slide-3 {
+  //  background: url(../img/preview-3.jpg) center no-repeat;
+  //  background-size: cover;
+  //}
+  //#slide-4 {
+  //  background: url(../img/preview-4.jpg) center no-repeat;
+  //  background-size: cover;
+  //}
+  //#slide-5 {
+  //  background: url(../img/preview-5.jpg) center no-repeat;
+  //  background-size: cover;
+  //}
+  //#slide-6 {
+  //  background: url(../img/preview-6.jpg) center no-repeat;
+  //  background-size: cover;
+  //}
+  //#slide-7 {
+  //  background: url(../img/preview-0.jpg) center no-repeat;
+  //  background-size: cover;
+  //}
+  //#slide-8 {
+  //  background: url(../img/preview-2.jpg) center no-repeat;
+  //  background-size: cover;
+  //}
 
   .about {
     float: left;
@@ -803,13 +771,30 @@
     }
   }
   .social {
-    &:after {
-      display: none;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    &:last-of-type:after {
+      width: 7px;
+      display: block;
     }
     li {
-      width: 33%;
-      margin-bottom: 20px;
-      text-align: center;
+      margin-bottom: 12px;
+      .print {
+        font-size: 22px;
+      }
+      .fb {
+        font-size: 16px;
+      }
+      .tw {
+        font-size: 20px;
+      }
+      .tumblr {
+        font-size: 17px;
+      }
+      .gplus {
+        font-size: 26px;
+      }
     }
   }
 }
@@ -1449,3 +1434,9 @@
 }
 
 /* ~ ~ ~ END OF MODAL-WINDOW (21.09.16) ~ ~ ~ */
+
+.contact-us {
+  height: 815px;
+  padding-right: 15px;
+  max-width: 800px;
+}

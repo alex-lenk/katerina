@@ -10,15 +10,17 @@
     right: -200px;
   }
   &-block {
-    display: block;
+    display: inline-block;
     background-color: #000;
-    width: 100px;
     color: #fff;
+    font-family: $CaviarDreams-Bold;
     span {
       display: block;
       padding: 7px 0;
-      line-height: 1.3;
+      line-height: 1.7;
       text-align: center;
+      font-size: 9px;
+      letter-spacing: 1px;
     }
   }
 }
