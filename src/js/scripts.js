@@ -328,4 +328,25 @@ $(document).ready(function () {
         $('.order-cont').css('display', 'block');
     });
     /* ~ ~ ~ END OF MODAL-WINDOW (21.09.16) ~ ~ ~ */
+
+
+    $('.portfolio').isotope({
+        itemSelector: '.portfolio li'
+    });
+
+    $('#filter li').click(function () {
+        $('#filter li').removeClass('current');
+        $(this).addClass('current');
+        var selector = $(this).attr('data-filter');
+
+        $('.portfolio').isotope({
+            filter: selector,
+            animationOptions: {
+                duration: 1000,
+                easing: 'easeOutQuart',
+                queue: false
+            }
+        });
+        return false;
+    });
 });
