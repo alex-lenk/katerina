@@ -153,7 +153,7 @@
         float: right;
         color: #888;
         font-size: 14px;
-        font-family: Roboto;
+        font-family: $Roboto;
       }
     }
   }
@@ -272,38 +272,6 @@
       }
     }
   }
-  .ask {
-    padding-right: 25px;
-    font-family: 'Roboto', sans-serif;
-    textarea {
-      font-size: 16px;
-      font-style: italic;
-      width: 100%;
-      height: 120px;
-      resize: none;
-      margin-bottom: 15px;
-      padding: 20px;
-      border: none;
-      outline: none;
-      background-color: #f7f7f7;
-      box-shadow: 0 5px 10px -3px #ccc inset;
-    }
-    textarea::-moz-selection {
-      color: #111;
-      background: $blueColor;
-    }
-    textarea::selection {
-      color: #111;
-      background: $blueColor;
-    }
-    .button {
-      width: 190px;
-      margin: auto;
-      margin-bottom: 20px;
-      background-color: #000;
-      color: $blueColor;
-    }
-  }
 }
 
 .profile-user {
@@ -362,63 +330,63 @@
       }
     }
   }
-  .comment-block {
-    border-top: 1px solid #ddd;
-    padding: 0 10px;
-    .comment {
-      position: relative;
-      border-bottom: 1px solid #ddd;
-      padding: 15px 0;
-    }
-    .avatar {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      margin: auto;
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      background-color: red;
-    }
-    .comment-message {
-      font-style: italic;
-      font-size: 13px;
-      color: #000;
-      margin-left: 80px;
-      line-height: 1.8;
-      width: calc(100% - 80px);
-    }
-  }
   .ask {
-    padding-right: 25px;
-    font-family: 'Roboto', sans-serif;
+    form {
+      padding: 15px;
+      margin-bottom: 5px;
+      text-align: center;
+      position: relative;
+      .form-control:focus + label {
+        top: 15px;
+        left: 20px;
+        padding: 0;
+        background-color: transparent;
+        color: #000000;
+      }
+    }
     textarea {
-      font-size: 16px;
-      font-style: italic;
-      width: 100%;
       height: 120px;
       resize: none;
       margin-bottom: 15px;
       padding: 20px;
-      border: none;
-      outline: none;
+      color: #090909;
       background-color: #f7f7f7;
       box-shadow: 0 5px 10px -3px #ccc inset;
-    }
-    textarea::-moz-selection {
-      color: #111;
-      background: $blueColor;
-    }
-    textarea::selection {
-      color: #111;
-      background: $blueColor;
+      font-size: 15px;
+      font-family: $RobotoCondensed;
+      font-style: italic;
+      font-weight: 300;
     }
     .button {
-      width: 190px;
-      margin: auto;
-      margin-bottom: 20px;
-      background-color: #000;
-      color: $blueColor;
+      font-size: 11px;
+      padding: 13px 35px;
+      letter-spacing: 2px;
+    }
+    .comment {
+      padding: 22px 10px;
+      margin-bottom: 0;
+      background-color: transparent;
+      border-top: 1px solid #f1f1f1;
+      color: #a5a5a5;
+      &:after {
+        display: none;
+      }
+      &:last-of-type {
+        border-bottom: 1px solid #f1f1f1;
+      }
+      &-message {
+        padding: 0;
+        margin: 0;
+        line-height: 20px;
+        font-family: $Roboto;
+        color: #000;
+        font-style: italic;
+      }
+      &:hover {
+        .comment-message {
+          color: inherit;
+        }
+      }
     }
   }
 
