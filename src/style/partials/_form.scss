@@ -24,7 +24,8 @@
     &:focus {
       outline: 0;
       + label {
-        top: -16px;
+        top: -13px;
+        font-size: 12px;
         opacity: 1;
         left: 0;
         padding: 1px 2px;
@@ -148,11 +149,13 @@
     }
   }
   &-title {
-    margin: 0 0 15px;
-    font-family: "CaviarDreams-Bold", sans-serif;
-    font-size: 18px;
+    margin: 0 0 5px;
+    font-family: $CaviarDreams-Bold;
+    font-weight: normal;
+    font-size: 16px;
     text-align: right;
     text-transform: uppercase;
+    letter-spacing: 1.5px;
   }
 }
 

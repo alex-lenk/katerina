@@ -15,6 +15,22 @@
 
 $(document).ready(function () {
 
+    $("#owl-demo2").owlCarousel({
+
+        navigation : false, // Show next and prev buttons
+        slideSpeed : 1000,
+        paginationSpeed : 400,
+        singleItem:true
+
+        // "singleItem:true" is a shortcut for:
+        // items : 1,
+        // itemsDesktop : false,
+        // itemsDesktopSmall : false,
+        // itemsTablet: false,
+        // itemsMobile : false
+
+    });
+
     $("#contacts-slider").owlCarousel({
         navigation: false, // Show next and prev buttons
         slideSpeed: 300,
@@ -330,8 +346,9 @@ $(document).ready(function () {
     /* ~ ~ ~ END OF MODAL-WINDOW (21.09.16) ~ ~ ~ */
 
 
-    $('.portfolio').isotope({
-        itemSelector: '.portfolio li'
+    // Инициализация плагина http://isotope.metafizzy.co/
+    $('.favorites-content').isotope({
+        itemSelector: '.favorites-content li'
     });
 
     $('#filter li').click(function () {
@@ -339,7 +356,7 @@ $(document).ready(function () {
         $(this).addClass('current');
         var selector = $(this).attr('data-filter');
 
-        $('.portfolio').isotope({
+        $('.favorites-content').isotope({
             filter: selector,
             animationOptions: {
                 duration: 1000,
@@ -349,4 +366,13 @@ $(document).ready(function () {
         });
         return false;
     });
+
+    //инициализация плагина от http://dimox.name/jquery-form-styler/
+    (function ($) {
+        $(function () {
+
+            $('select').styler();
+
+        });
+    })(jQuery);
 });

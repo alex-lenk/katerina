@@ -1,10 +1,10 @@
 .footer-bottom {
   position: fixed;
   z-index: 30;
-  bottom: -100px;
+  bottom: -97px;
   max-width: 1500px;
   min-width: 1300px;
-  height: 90px;
+  height: 110px;
   background-color: rgba(0, 0, 0, .68);
   -webkit-transform: skewY(8deg);
   -moz-transform: skewY(8deg);
@@ -12,8 +12,8 @@
   transform: skewY(8deg);
   .logo {
     position: absolute;
-    top: 15px;
-    left: 24px;
+    top: 26px;
+    left: 16px;
     transform: skewY(-8deg)
   }
 }

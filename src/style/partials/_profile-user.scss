@@ -527,11 +527,6 @@
       color: red;
     }
   }
-  &::after {
-    display: block;
-    content: '';
-    clear: both;
-  }
 }
 
 .purchase-grid {
@@ -593,8 +588,8 @@
 
 .favorites {
   &-nav {
-    margin: 0 0 15px;
-    padding: 17px 20px 15px;
+    margin: 0;
+    padding: 17px 20px;
     font-size: 20px;
     font-family: $BebasNeueRegular;
     list-style: none;
@@ -617,13 +612,16 @@
     padding: 0;
     list-style: none;
     text-align: center;
+    overflow: hidden;
     li {
       width: 205px;
       height: 185px;
-      margin-right: 8px;
+      margin: 0 13px 36px 0;
       display: inline-block;
       vertical-align: top;
-      position: relative;
+      position: relative !important;
+      top: auto !important;
+      left: auto !important;
     }
     .img {
       img {

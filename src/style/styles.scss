@@ -19,6 +19,7 @@
 @import "partials/social";
 @import "partials/gallery";
 @import "partials/profile-user";
+@import "partials/jquery.formstyler";
 
 .blur {
   filter: blur(2px);
@@ -564,6 +565,7 @@
 .tab-bio {
   position: relative;
   .bio-container {
+    max-width: 1040px;
     margin-left: 10px;
     margin-right: 25px;
   }
@@ -1438,5 +1440,35 @@
 .contact-us {
   height: 815px;
   padding-right: 15px;
-  max-width: 800px;
+  max-width: 805px;
+}
+
+.select {
+  width: 100%;
+}
+.jq-selectbox__select {
+  height: 37px;
+  line-height: 37px;
+  margin-bottom: 10px;
+  font-size: 10px;
+  font-family: $CaviarDreams-Bold;
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background-color: $blueColor;
+  padding: 0 33px 0 17px;
+  border: 0;
+}
+
+#owl-demo2 .item img{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+#owl-demo2 {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
