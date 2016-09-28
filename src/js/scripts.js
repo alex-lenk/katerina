@@ -55,7 +55,7 @@ $(document).ready(function () {
 
 
         $('.moving-panel').css({
-            'display': 'none',
+            //'display': 'none',
             'left': '-120%'
         });
         $('.bg').removeClass('blur');

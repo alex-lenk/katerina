@@ -42,6 +42,7 @@
   min-height: 700px;
   height: 100%;
   color: $blueColor;
+  transition: all 1s linear;
   &::after {
     top: 0;
     left: 0;

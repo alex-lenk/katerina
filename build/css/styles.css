@@ -510,6 +510,7 @@ img {
   min-height: 700px;
   height: 100%;
   color: #5dc4ff;
+  transition: all 1s linear;
 }
 
 .moving-panel::after {
