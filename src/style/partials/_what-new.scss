@@ -231,7 +231,9 @@
         margin-right: 25px;
         border-radius: 50%;
         background-color: $red;
-        flex: 1 0 60px;
+        @include to('l') {
+          flex: 1 0 60px;
+        }
       }
       &-message {
         font-family: $RobotoCondensed;
@@ -252,15 +254,15 @@
       &::after {
         opacity: 0;
         position: absolute;
-        width: 20px;
-        height: 20px;
+        width: 16px;
+        height: 16px;
         top: 0;
-        right: 20px;
+        right: 31px;
         bottom: 0;
         margin: auto;
         color: $blueColor;
-        font-family: 'IcoMoon';
-        content: '\e967';
+        background: url(../img/svg/reply.svg) no-repeat;
+        content: '';
         transition: .3s ease;
       }
       &:hover {

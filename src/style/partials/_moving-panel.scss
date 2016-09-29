@@ -54,16 +54,16 @@
     background-color: rgba(0, 0, 0, 0.8);
     transform: skewX(-7deg);
     transition: .3s ease;
-    z-index: 5;
+    z-index: 4;
   }
   //.moving-panel-header
   &-header {
     margin: 0 0 13px 60px;
-    padding: 8px 30px 0 0;
+    padding: 13px 30px 0 0;
     display: flex;
     align-items: center;
     position: relative;
-    z-index: 7;
+    z-index: 5;
     &::after {
       height: 1px;
       margin-bottom: 9px;
@@ -83,7 +83,7 @@
       font-size: 40px;
       font-family: $BebasNeueBold;
       font-weight: normal;
-      letter-spacing: 2px;
+      letter-spacing: 2.5px;
     }
     .info {
       margin: 0;

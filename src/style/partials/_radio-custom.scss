@@ -40,4 +40,7 @@
   &:disabled + .radio-custom-view:before {
     background-color: #f2f2f2
   }
+  &-view {
+    cursor: pointer;
+  }
 }

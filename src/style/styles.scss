@@ -26,7 +26,7 @@
 }
 
 .tabs {
-  margin: -25px 0 0;
+  margin: -35px 0 0;
   .nav-tabs {
     margin: 0;
     padding: 0;
@@ -37,13 +37,13 @@
     font-size: 20px;
     li {
       display: inline-block;
-      color: #fff;
+      color: $blueColor;
       cursor: pointer;
       position: relative;
-      line-height: .7;
+      transition: .3s ease;
     }
     .active {
-      color: #5dc4ff;
+      color: #fff;
       cursor: default;
     }
   }
@@ -67,12 +67,19 @@
       }
       li {
         &:first-child {
-          margin: 0 15px;
-          padding-right: 15px;
-          border-right: 2px solid;
+          margin: 0 15px 0 26px;
+          &:after {
+            content: '';
+            background-color: #fff;
+            height: 16px;
+            margin-left: 13px;
+            width: 2px;
+            display: inline-block;
+            vertical-align: middle;
+          }
         }
-        &:hover {
-          color: #5dc4ff;
+        &:NOT(.active):hover {
+          color: #fff;
         }
       }
     }
@@ -146,11 +153,23 @@
       font-size: 10px;
       font-weight: normal;
       font-family: $CaviarDreams-Bold;
-      border: 1px solid transparent;
       transition: .3s ease;
+      overflow: hidden;
+      &:after {
+        width: 100%;
+        height: 1px;
+        position: relative;
+        left: -100%;
+        display: block;
+        content: '';
+        background-color: $blueColor;
+        transition: .3s linear;
+      }
       &:hover, &.active {
         color: $blueColor;
-        border-bottom-color: $blueColor;
+        &:after {
+          left: 0;
+        }
       }
     }
   }
@@ -712,10 +731,6 @@
     width: 100%;
   }
   .owl-carousel .owl-wrapper-outer.autoHeight {
-    -webkit-transition: height 500ms ease-in-out;
-    -moz-transition: height 500ms ease-in-out;
-    -ms-transition: height 500ms ease-in-out;
-    -o-transition: height 500ms ease-in-out;
     transition: height 500ms ease-in-out;
   }
 
@@ -727,10 +742,6 @@
     cursor: pointer;
   }
   .owl-controls {
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   }
@@ -743,12 +754,8 @@
   /* fix */
   .owl-carousel .owl-wrapper,
   .owl-carousel .owl-item {
-    -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
-    -ms-backface-visibility: hidden;
-    -webkit-transform: translate3d(0, 0, 0);
-    -moz-transform: translate3d(0, 0, 0);
-    -ms-transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;;
+    transform: translate3d(0, 0, 0);
   }
 }
 
@@ -1442,10 +1449,10 @@
   padding-right: 15px;
   max-width: 805px;
 }
-
-.select {
+.feedback-select {
   width: 100%;
 }
+
 .jq-selectbox__select {
   height: 37px;
   line-height: 37px;
@@ -1460,10 +1467,10 @@
   border: 0;
 }
 
-#owl-demo2 .item img{
+#owl-demo2 .item img {
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
 }
 
 #owl-demo2 {
@@ -1471,4 +1478,7 @@
   position: absolute;
   top: 0;
   left: 0;
+  .owl-wrapper, .owl-wrapper-outer, .owl-item, .item {
+    height: 100%;
+  }
 }

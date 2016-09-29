@@ -16,19 +16,14 @@
 $(document).ready(function () {
 
     $("#owl-demo2").owlCarousel({
-
-        navigation : false, // Show next and prev buttons
-        slideSpeed : 1000,
-        paginationSpeed : 400,
-        singleItem:true
-
-        // "singleItem:true" is a shortcut for:
-        // items : 1,
-        // itemsDesktop : false,
-        // itemsDesktopSmall : false,
-        // itemsTablet: false,
-        // itemsMobile : false
-
+        stopOnHover: true,
+        lazyLoad: true,
+        transitionStyle: "fade",
+        autoPlay: 5000,
+        slideSpeed: 1000,
+        pagination: false,
+        singleItem: true,
+        mouseDrag: false
     });
 
     $("#contacts-slider").owlCarousel({
@@ -40,8 +35,8 @@ $(document).ready(function () {
 
 
     $('.bg').css('height', $(document).height() + 'px');
-    $('.tab-block').css('height', $(window).height() - 100 + 'px');
-    $('.table-container').css('height', $(window).height() - 150 + 'px');
+    $('.tab-block').css('height', $(window).height());
+    $('.table-container').css('height', $(window).height() - 50 + 'px');
     var k, massiveOftables = [];
     var numbOftab;
     var tabId;
@@ -92,7 +87,7 @@ $(document).ready(function () {
             var active = $(id).find('.tab.active').attr('data-id');
             tabId = active;
             $(active).css('display', 'block');
-            numbOftab = $(active).find('.drop-nav ul').children().length;
+            numbOftab = $(active).find('.drop-nav ul, tr th').children().length;
             if (numbOftab) {
                 k = numbOftab;
                 while (k) {
@@ -208,27 +203,27 @@ $(document).ready(function () {
 
 
 //Слайдер
-    setInterval(function () {
-        slide();
-    }, 10000);
-    function slide() {
-        var sliderBody = $('.slider');
-        var current = sliderBody.attr('data-current');
-        var last = sliderBody.children().last().attr('data-number');
-        sliderBody.append(sliderBody.children().first().clone());
-        sliderBody.find('[data-number="' + current + '"]').css({
-            'opacity': '0'
-        });
-        sliderBody.children().last().attr('data-number', +last + 1);
-        current++;
-        sliderBody.find('[data-number="' + current + '"]').css({
-            'opacity': '1'
-        });
-        sliderBody.attr('data-current', current);
-        setTimeout(function () {
-            $('.slider').children().first().remove();
-        }, 700);
-    }
+//     setInterval(function () {
+//         slide();
+//     }, 10000);
+//     function slide() {
+//         var sliderBody = $('.slider');
+//         var current = sliderBody.attr('data-current');
+//         var last = sliderBody.children().last().attr('data-number');
+//         sliderBody.append(sliderBody.children().first().clone());
+//         sliderBody.find('[data-number="' + current + '"]').css({
+//             'opacity': '0'
+//         });
+//         sliderBody.children().last().attr('data-number', +last + 1);
+//         current++;
+//         sliderBody.find('[data-number="' + current + '"]').css({
+//             'opacity': '1'
+//         });
+//         sliderBody.attr('data-current', current);
+//         setTimeout(function () {
+//             $('.slider').children().first().remove();
+//         }, 700);
+//     }
 
 
 //CustomScrollbar
@@ -371,7 +366,7 @@ $(document).ready(function () {
     (function ($) {
         $(function () {
 
-            $('select').styler();
+            $('.feedback-select').styler();
 
         });
     })(jQuery);

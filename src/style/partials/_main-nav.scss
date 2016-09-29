@@ -22,6 +22,7 @@
   font-family: $CaviarDreams-Bold;
   color: #fff;
   border-left: 1px solid #252525;
+  transition: .4s ease;
   &:first-of-type {
     z-index: 20;
     left: -62px;
@@ -57,7 +58,7 @@
   }
   &:last-of-type {
     z-index: 12;
-    left: 120px;
+    left: 119px;
     background-color: rgba(0, 0, 0, 0.57);
   }
   &:hover {
