@@ -453,42 +453,6 @@
   //}
 }
 
-.color-picker {
-  position: absolute;
-  z-index: 20;
-  right: 5px;
-  top: 0;
-  width: 100px;
-  height: 20px;
-  input {
-    display: none;
-  }
-  input:checked + label {
-    border: 2px solid $blueColor;
-  }
-  label {
-    display: block;
-    float: left;
-    width: 17px;
-    height: 17px;
-    padding: 3px;
-    margin-right: 12px;
-    border: 2px solid transparent;
-    border-radius: 50%;
-    background-clip: content-box;
-    cursor: pointer;
-    &:first-of-type {
-      background-color: $blueColor;
-    }
-    &:nth-of-type(2) {
-      background-color: red;
-    }
-    &:last-of-type {
-      background-color: #ddd;
-    }
-  }
-}
-
 .purchase-grid {
   padding: 65px 65px 0 65px;
   display: flex;
